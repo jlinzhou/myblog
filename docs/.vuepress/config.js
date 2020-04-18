@@ -1,10 +1,23 @@
+const moment = require('moment');
+moment.locale("zh-cn")
 module.exports = {
+    base: "/docs",
     title: "一朝春诔",
     description: "一朝春诔的学习笔记",
     head: [
         ['link', { rel: 'icon', 'href': 'assets/img/favicon.ico' }],
         ['meta', { name: 'author', content: '一朝春诔' }],
         ['meta', { name: 'keywords', content: 'vuepress介绍，vuepress说明，一朝春诔' }],
+    ],
+    plugins: [
+        [
+            '@vuepress/last-updated',
+            {
+                transformer: (timestamp) => {
+                    return moment(timestamp).format("LLLL")
+                }
+            }
+        ]
     ],
     themeConfig: {
         logo: '/assets/img/logo.png',

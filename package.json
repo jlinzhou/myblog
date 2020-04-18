@@ -1,10 +1,14 @@
 {
-  "scripts": {
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
-  },
-  "devDependencies": {
-    "vuepress": "^1.4.1",
-    "vuepress-plugin-auto-sidebar": "^1.4.1"
-  }
+    "scripts": {
+        "docs:dev": "vuepress dev docs",
+        "docs:build": "vuepress build docs",
+        "deploy": "bash deploy.sh"
+    },
+    "devDependencies": {
+        "vuepress": "^1.4.1",
+        "vuepress-plugin-auto-sidebar": "^1.4.1"
+    },
+    "dependencies": {
+        "moment": "^2.24.0"
+    }
 }
