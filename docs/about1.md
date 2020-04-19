@@ -1,5 +1,5 @@
 ---
-# navbar: false
+navbar: false
 title: 关于我1
 ---
 ## 一级标题1
