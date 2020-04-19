@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>一朝春诔</title>
+    <title>vue启动流程 | 一朝春诔</title>
     <meta name="generator" content="VuePress 1.4.1">
     <link rel="icon" href="assets/img/favicon.ico">
     <link rel="manifest" href="manifest.json">
@@ -16,11 +16,11 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="msapplication-TileImage" content="icons/icon-144x144.png">
     <meta name="msapplication-TileColor" content="#000000">
-    <link rel="preload" href="/assets/css/0.styles.27faccf6.css" as="style"><link rel="preload" href="/assets/js/app.29834792.js" as="script"><link rel="preload" href="/assets/js/6.a4c4b5d6.js" as="script"><link rel="preload" href="/assets/js/2.1492d491.js" as="script"><link rel="preload" href="/assets/js/8.e855ae57.js" as="script"><link rel="preload" href="/assets/js/3.90399333.js" as="script"><link rel="prefetch" href="/assets/js/10.87145463.js"><link rel="prefetch" href="/assets/js/11.1918620a.js"><link rel="prefetch" href="/assets/js/12.6cce430e.js"><link rel="prefetch" href="/assets/js/13.efa48d13.js"><link rel="prefetch" href="/assets/js/14.27d23835.js"><link rel="prefetch" href="/assets/js/15.6a4bd2a2.js"><link rel="prefetch" href="/assets/js/16.963c7d28.js"><link rel="prefetch" href="/assets/js/17.8e7d945e.js"><link rel="prefetch" href="/assets/js/18.8693db43.js"><link rel="prefetch" href="/assets/js/19.42cce320.js"><link rel="prefetch" href="/assets/js/20.6b2f826c.js"><link rel="prefetch" href="/assets/js/21.54a5a5f4.js"><link rel="prefetch" href="/assets/js/22.1380ca7e.js"><link rel="prefetch" href="/assets/js/23.5ae06d94.js"><link rel="prefetch" href="/assets/js/24.30ae2ad2.js"><link rel="prefetch" href="/assets/js/25.b5403e58.js"><link rel="prefetch" href="/assets/js/26.f3821ce8.js"><link rel="prefetch" href="/assets/js/27.e332d1a2.js"><link rel="prefetch" href="/assets/js/28.4f0a4b4d.js"><link rel="prefetch" href="/assets/js/29.aa1f0085.js"><link rel="prefetch" href="/assets/js/30.74d62b1b.js"><link rel="prefetch" href="/assets/js/31.0240618c.js"><link rel="prefetch" href="/assets/js/32.5e0c99bc.js"><link rel="prefetch" href="/assets/js/33.9a2cc730.js"><link rel="prefetch" href="/assets/js/34.11a5e517.js"><link rel="prefetch" href="/assets/js/35.30fcd52f.js"><link rel="prefetch" href="/assets/js/36.d92c317f.js"><link rel="prefetch" href="/assets/js/37.48f65213.js"><link rel="prefetch" href="/assets/js/38.4229672d.js"><link rel="prefetch" href="/assets/js/39.9ebbe2e7.js"><link rel="prefetch" href="/assets/js/4.ffd4e858.js"><link rel="prefetch" href="/assets/js/40.2062c717.js"><link rel="prefetch" href="/assets/js/41.f083e3b3.js"><link rel="prefetch" href="/assets/js/42.d9c0e07c.js"><link rel="prefetch" href="/assets/js/43.2dd4922c.js"><link rel="prefetch" href="/assets/js/44.f5de393c.js"><link rel="prefetch" href="/assets/js/45.c82cb76e.js"><link rel="prefetch" href="/assets/js/46.65eb29c3.js"><link rel="prefetch" href="/assets/js/47.2ae4fd4e.js"><link rel="prefetch" href="/assets/js/5.0000f2bd.js"><link rel="prefetch" href="/assets/js/7.be7c9864.js"><link rel="prefetch" href="/assets/js/9.a7df38a9.js">
+    <link rel="preload" href="/assets/css/0.styles.27faccf6.css" as="style"><link rel="preload" href="/assets/js/app.29834792.js" as="script"><link rel="preload" href="/assets/js/6.a4c4b5d6.js" as="script"><link rel="preload" href="/assets/js/2.1492d491.js" as="script"><link rel="preload" href="/assets/js/24.30ae2ad2.js" as="script"><link rel="preload" href="/assets/js/3.90399333.js" as="script"><link rel="prefetch" href="/assets/js/10.87145463.js"><link rel="prefetch" href="/assets/js/11.1918620a.js"><link rel="prefetch" href="/assets/js/12.6cce430e.js"><link rel="prefetch" href="/assets/js/13.efa48d13.js"><link rel="prefetch" href="/assets/js/14.27d23835.js"><link rel="prefetch" href="/assets/js/15.6a4bd2a2.js"><link rel="prefetch" href="/assets/js/16.963c7d28.js"><link rel="prefetch" href="/assets/js/17.8e7d945e.js"><link rel="prefetch" href="/assets/js/18.8693db43.js"><link rel="prefetch" href="/assets/js/19.42cce320.js"><link rel="prefetch" href="/assets/js/20.6b2f826c.js"><link rel="prefetch" href="/assets/js/21.54a5a5f4.js"><link rel="prefetch" href="/assets/js/22.1380ca7e.js"><link rel="prefetch" href="/assets/js/23.5ae06d94.js"><link rel="prefetch" href="/assets/js/25.b5403e58.js"><link rel="prefetch" href="/assets/js/26.f3821ce8.js"><link rel="prefetch" href="/assets/js/27.e332d1a2.js"><link rel="prefetch" href="/assets/js/28.4f0a4b4d.js"><link rel="prefetch" href="/assets/js/29.aa1f0085.js"><link rel="prefetch" href="/assets/js/30.74d62b1b.js"><link rel="prefetch" href="/assets/js/31.0240618c.js"><link rel="prefetch" href="/assets/js/32.5e0c99bc.js"><link rel="prefetch" href="/assets/js/33.9a2cc730.js"><link rel="prefetch" href="/assets/js/34.11a5e517.js"><link rel="prefetch" href="/assets/js/35.30fcd52f.js"><link rel="prefetch" href="/assets/js/36.d92c317f.js"><link rel="prefetch" href="/assets/js/37.48f65213.js"><link rel="prefetch" href="/assets/js/38.4229672d.js"><link rel="prefetch" href="/assets/js/39.9ebbe2e7.js"><link rel="prefetch" href="/assets/js/4.ffd4e858.js"><link rel="prefetch" href="/assets/js/40.2062c717.js"><link rel="prefetch" href="/assets/js/41.f083e3b3.js"><link rel="prefetch" href="/assets/js/42.d9c0e07c.js"><link rel="prefetch" href="/assets/js/43.2dd4922c.js"><link rel="prefetch" href="/assets/js/44.f5de393c.js"><link rel="prefetch" href="/assets/js/45.c82cb76e.js"><link rel="prefetch" href="/assets/js/46.65eb29c3.js"><link rel="prefetch" href="/assets/js/47.2ae4fd4e.js"><link rel="prefetch" href="/assets/js/5.0000f2bd.js"><link rel="prefetch" href="/assets/js/7.be7c9864.js"><link rel="prefetch" href="/assets/js/8.e855ae57.js"><link rel="prefetch" href="/assets/js/9.a7df38a9.js">
     <link rel="stylesheet" href="/assets/css/0.styles.27faccf6.css">
   </head>
   <body>
-    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-exact-active router-link-active"><!----> <span class="site-name">一朝春诔</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link router-link-exact-active router-link-active">
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">一朝春诔</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
   Home
 </a></div><div class="nav-item"><a href="/guide/" class="nav-link">
   Guide
@@ -72,11 +72,11 @@
   面试宝典
 </a></li><li class="dropdown-item"><!----> <a href="/other/other/" class="nav-link">
   其他
-</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/frontend/vue/" class="nav-link">
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/frontend/vue/" class="nav-link router-link-exact-active router-link-active">
   vue
 </a></li></ul></div></div><div class="nav-item"><a href="https://github.com/jlinzhou" target="_self" rel="" class="nav-link external">
   Github
-  <!----></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link router-link-exact-active router-link-active">
+  <!----></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
   Home
 </a></div><div class="nav-item"><a href="/guide/" class="nav-link">
   Guide
@@ -128,19 +128,25 @@
   面试宝典
 </a></li><li class="dropdown-item"><!----> <a href="/other/other/" class="nav-link">
   其他
-</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/frontend/vue/" class="nav-link">
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/frontend/vue/" class="nav-link router-link-exact-active router-link-active">
   vue
 </a></li></ul></div></div><div class="nav-item"><a href="https://github.com/jlinzhou" target="_self" rel="" class="nav-link external">
   Github
-  <!----></a></div> <!----></nav>  <!----> </aside> <main aria-labelledby="main-title" class="home"><header class="hero"><!----> <h1 id="main-title">
-      一朝春诔
-    </h1> <p class="description">
-      一份耕耘,一份收获
-    </p> <p class="action"><a href="/zh/guide/" class="nav-link action-button">
-  查看笔记 →
-</a></p></header> <div class="features"><div class="feature"><h2>关于</h2> <p>博客使用 VuePress 搭建，使用了pwa,back-to-top,google-analytics,vuepress-plugin-auto-sidebar,last-updated,medium-zoom插件，使用了Travis ci做持续集成。</p></div><div class="feature"><h2>收获</h2> <p>每天收获小进步，积累起来就是大进步；每天收获小幸福，积攒起来便成大幸福。</p></div><div class="feature"><h2>目的</h2> <p>博客是给谁看的？给自己还是给别人？我的答案是——给“未来”的自己。</p></div></div> <div class="theme-default-content custom content__default"></div> <div class="footer">
-    MIT Licensed | Copyright © 2020-present Evan You
-  </div></main></div><div class="global-ui"><!----><!----></div></div>
-    <script src="/assets/js/app.29834792.js" defer></script><script src="/assets/js/6.a4c4b5d6.js" defer></script><script src="/assets/js/2.1492d491.js" defer></script><script src="/assets/js/8.e855ae57.js" defer></script><script src="/assets/js/3.90399333.js" defer></script>
+  <!----></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>vue</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/frontend/vue/" class="active sidebar-link">vue启动流程</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><div class="language-vue extra-class"><pre class="language-vue"><code>Cnpm i vue --save
+Npm install -g vue-cli
+Vue init webpack-simple demo5
+Vue init webpack demo5
+</code></pre></div><div class="language-vue extra-class"><pre class="language-vue"><code>Cnpm install
+Cnpm run dev
+</code></pre></div><p>打包webpack</p> <div class="language-vue extra-class"><pre class="language-vue"><code>Cnpm run build 打包生成dict文件
+
+cnpm i vue --save
+cnpm i vue-resource --save
+Npm install axis --save
+</code></pre></div><p>npm新建项目流程</p> <div class="language-vue extra-class"><pre class="language-vue"><code>npm install -g @vue/cli
+vue create hello-vue
+npm install --save axios element-ui
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">更新时间:</span> <span class="time">2020年4月19日星期日下午12点32分</span></div></footer> <!---->  <!----></main></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/assets/js/app.29834792.js" defer></script><script src="/assets/js/6.a4c4b5d6.js" defer></script><script src="/assets/js/2.1492d491.js" defer></script><script src="/assets/js/24.30ae2ad2.js" defer></script><script src="/assets/js/3.90399333.js" defer></script>
   </body>
 </html>

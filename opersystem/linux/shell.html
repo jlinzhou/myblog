@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>shell各种小练习 | 一朝春诔</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    <link rel="icon" href="assets/img/favicon.ico">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icons/icon-152x152.png">
+    <meta name="description" content="一朝春诔的学习笔记">
+    <meta name="author" content="一朝春诔">
+    <meta name="keywords" content="vuepress介绍，vuepress说明，一朝春诔">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="icons/icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    <link rel="preload" href="/assets/css/0.styles.27faccf6.css" as="style"><link rel="preload" href="/assets/js/app.29834792.js" as="script"><link rel="preload" href="/assets/js/6.a4c4b5d6.js" as="script"><link rel="preload" href="/assets/js/2.1492d491.js" as="script"><link rel="preload" href="/assets/js/27.e332d1a2.js" as="script"><link rel="preload" href="/assets/js/3.90399333.js" as="script"><link rel="prefetch" href="/assets/js/10.87145463.js"><link rel="prefetch" href="/assets/js/11.1918620a.js"><link rel="prefetch" href="/assets/js/12.6cce430e.js"><link rel="prefetch" href="/assets/js/13.efa48d13.js"><link rel="prefetch" href="/assets/js/14.27d23835.js"><link rel="prefetch" href="/assets/js/15.6a4bd2a2.js"><link rel="prefetch" href="/assets/js/16.963c7d28.js"><link rel="prefetch" href="/assets/js/17.8e7d945e.js"><link rel="prefetch" href="/assets/js/18.8693db43.js"><link rel="prefetch" href="/assets/js/19.42cce320.js"><link rel="prefetch" href="/assets/js/20.6b2f826c.js"><link rel="prefetch" href="/assets/js/21.54a5a5f4.js"><link rel="prefetch" href="/assets/js/22.1380ca7e.js"><link rel="prefetch" href="/assets/js/23.5ae06d94.js"><link rel="prefetch" href="/assets/js/24.30ae2ad2.js"><link rel="prefetch" href="/assets/js/25.b5403e58.js"><link rel="prefetch" href="/assets/js/26.f3821ce8.js"><link rel="prefetch" href="/assets/js/28.4f0a4b4d.js"><link rel="prefetch" href="/assets/js/29.aa1f0085.js"><link rel="prefetch" href="/assets/js/30.74d62b1b.js"><link rel="prefetch" href="/assets/js/31.0240618c.js"><link rel="prefetch" href="/assets/js/32.5e0c99bc.js"><link rel="prefetch" href="/assets/js/33.9a2cc730.js"><link rel="prefetch" href="/assets/js/34.11a5e517.js"><link rel="prefetch" href="/assets/js/35.30fcd52f.js"><link rel="prefetch" href="/assets/js/36.d92c317f.js"><link rel="prefetch" href="/assets/js/37.48f65213.js"><link rel="prefetch" href="/assets/js/38.4229672d.js"><link rel="prefetch" href="/assets/js/39.9ebbe2e7.js"><link rel="prefetch" href="/assets/js/4.ffd4e858.js"><link rel="prefetch" href="/assets/js/40.2062c717.js"><link rel="prefetch" href="/assets/js/41.f083e3b3.js"><link rel="prefetch" href="/assets/js/42.d9c0e07c.js"><link rel="prefetch" href="/assets/js/43.2dd4922c.js"><link rel="prefetch" href="/assets/js/44.f5de393c.js"><link rel="prefetch" href="/assets/js/45.c82cb76e.js"><link rel="prefetch" href="/assets/js/46.65eb29c3.js"><link rel="prefetch" href="/assets/js/47.2ae4fd4e.js"><link rel="prefetch" href="/assets/js/5.0000f2bd.js"><link rel="prefetch" href="/assets/js/7.be7c9864.js"><link rel="prefetch" href="/assets/js/8.e855ae57.js"><link rel="prefetch" href="/assets/js/9.a7df38a9.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.27faccf6.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">一朝春诔</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/backend/golang/" class="nav-link">
+  golang
+</a></li><li class="dropdown-item"><!----> <a href="/backend/python/" class="nav-link">
+  python
+</a></li><li class="dropdown-item"><!----> <a href="/backend/cplus/" class="nav-link">
+  c++
+</a></li><li class="dropdown-item"><!----> <a href="/backend/lua/" class="nav-link">
+  lua
+</a></li><li class="dropdown-item"><!----> <a href="/backend/vba/" class="nav-link">
+  vba
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/database/mysql/" class="nav-link">
+  mysql
+</a></li><li class="dropdown-item"><!----> <a href="/database/mongodb/" class="nav-link">
+  mongodb
+</a></li><li class="dropdown-item"><!----> <a href="/database/redis/" class="nav-link">
+  redis
+</a></li><li class="dropdown-item"><!----> <a href="/database/etcd/" class="nav-link">
+  etcd
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">编程基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/programming/algo/" class="nav-link">
+  算法与数据结构
+</a></li><li class="dropdown-item"><!----> <a href="/programming/pattern/" class="nav-link">
+  设计模式
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="操作系统" class="dropdown-title"><span class="title">操作系统</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/opersystem/windows/" class="nav-link">
+  windows
+</a></li><li class="dropdown-item"><!----> <a href="/opersystem/linux/" class="nav-link router-link-active">
+  linux
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发工具" class="dropdown-title"><span class="title">开发工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/tool/git/" class="nav-link">
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/tool/goland/" class="nav-link">
+  goland
+</a></li><li class="dropdown-item"><!----> <a href="/tool/vscode/" class="nav-link">
+  vscode
+</a></li><li class="dropdown-item"><!----> <a href="/tool/pycharm/" class="nav-link">
+  pycharm
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/other/nginx/" class="nav-link">
+  nginx
+</a></li><li class="dropdown-item"><!----> <a href="/other/rabbitmq/" class="nav-link">
+  rabbitmq
+</a></li><li class="dropdown-item"><!----> <a href="/other/docker/" class="nav-link">
+  docker
+</a></li><li class="dropdown-item"><!----> <a href="/other/k8s/" class="nav-link">
+  k8s
+</a></li><li class="dropdown-item"><!----> <a href="/other/workrecord/" class="nav-link">
+  工作记录
+</a></li><li class="dropdown-item"><!----> <a href="/other/interview/" class="nav-link">
+  面试宝典
+</a></li><li class="dropdown-item"><!----> <a href="/other/other/" class="nav-link">
+  其他
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/frontend/vue/" class="nav-link">
+  vue
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/jlinzhou" target="_self" rel="" class="nav-link external">
+  Github
+  <!----></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/backend/golang/" class="nav-link">
+  golang
+</a></li><li class="dropdown-item"><!----> <a href="/backend/python/" class="nav-link">
+  python
+</a></li><li class="dropdown-item"><!----> <a href="/backend/cplus/" class="nav-link">
+  c++
+</a></li><li class="dropdown-item"><!----> <a href="/backend/lua/" class="nav-link">
+  lua
+</a></li><li class="dropdown-item"><!----> <a href="/backend/vba/" class="nav-link">
+  vba
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/database/mysql/" class="nav-link">
+  mysql
+</a></li><li class="dropdown-item"><!----> <a href="/database/mongodb/" class="nav-link">
+  mongodb
+</a></li><li class="dropdown-item"><!----> <a href="/database/redis/" class="nav-link">
+  redis
+</a></li><li class="dropdown-item"><!----> <a href="/database/etcd/" class="nav-link">
+  etcd
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">编程基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/programming/algo/" class="nav-link">
+  算法与数据结构
+</a></li><li class="dropdown-item"><!----> <a href="/programming/pattern/" class="nav-link">
+  设计模式
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="操作系统" class="dropdown-title"><span class="title">操作系统</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/opersystem/windows/" class="nav-link">
+  windows
+</a></li><li class="dropdown-item"><!----> <a href="/opersystem/linux/" class="nav-link router-link-active">
+  linux
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发工具" class="dropdown-title"><span class="title">开发工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/tool/git/" class="nav-link">
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/tool/goland/" class="nav-link">
+  goland
+</a></li><li class="dropdown-item"><!----> <a href="/tool/vscode/" class="nav-link">
+  vscode
+</a></li><li class="dropdown-item"><!----> <a href="/tool/pycharm/" class="nav-link">
+  pycharm
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/other/nginx/" class="nav-link">
+  nginx
+</a></li><li class="dropdown-item"><!----> <a href="/other/rabbitmq/" class="nav-link">
+  rabbitmq
+</a></li><li class="dropdown-item"><!----> <a href="/other/docker/" class="nav-link">
+  docker
+</a></li><li class="dropdown-item"><!----> <a href="/other/k8s/" class="nav-link">
+  k8s
+</a></li><li class="dropdown-item"><!----> <a href="/other/workrecord/" class="nav-link">
+  工作记录
+</a></li><li class="dropdown-item"><!----> <a href="/other/interview/" class="nav-link">
+  面试宝典
+</a></li><li class="dropdown-item"><!----> <a href="/other/other/" class="nav-link">
+  其他
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/frontend/vue/" class="nav-link">
+  vue
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/jlinzhou" target="_self" rel="" class="nav-link external">
+  Github
+  <!----></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>linux</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/opersystem/linux/" class="sidebar-link">linux</a></li><li><a href="/opersystem/linux/shell.html" class="active sidebar-link">shell各种小练习</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/opersystem/linux/shell.html#mysql自动备份" class="sidebar-link">mysql自动备份</a></li><li class="sidebar-sub-header"><a href="/opersystem/linux/shell.html#mysql自动安装" class="sidebar-link">mysql自动安装</a></li><li class="sidebar-sub-header"><a href="/opersystem/linux/shell.html#redis自动安装" class="sidebar-link">redis自动安装</a></li><li class="sidebar-sub-header"><a href="/opersystem/linux/shell.html#mongodb自动安装" class="sidebar-link">mongodb自动安装</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="mysql自动备份"><a href="#mysql自动备份" class="header-anchor">#</a> mysql自动备份</h2> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token shebang important">#!/bin/bash</span>
+<span class="token comment">#auto backup mysql db</span>
+<span class="token comment">#by 2019</span>
+<span class="token assign-left variable">BAK_DIR</span><span class="token operator">=</span>/data/backup/<span class="token variable"><span class="token variable">`</span><span class="token function">date</span> +%Y%m%d<span class="token variable">`</span></span>
+<span class="token assign-left variable">MYSQLDB</span><span class="token operator">=</span>test
+<span class="token assign-left variable">MYSQLUSR</span><span class="token operator">=</span>root
+<span class="token assign-left variable">MYSQLPW</span><span class="token operator">=</span>a654321B
+<span class="token assign-left variable">MYSQLCMD</span><span class="token operator">=</span>/usr/bin/mysqldump
+<span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token environment constant">$UID</span> -ne <span class="token number">0</span> <span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token keyword">then</span>
+	<span class="token builtin class-name">echo</span> <span class="token string">&quot;must to be user root&quot;</span>
+	<span class="token builtin class-name">exit</span>
+<span class="token keyword">fi</span>
+<span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token operator">!</span> -d <span class="token variable">$BAK_DIR</span> <span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token keyword">then</span>
+	<span class="token function">mkdir</span> -p <span class="token variable">$BAK_DIR</span>
+<span class="token keyword">else</span> 
+	<span class="token builtin class-name">echo</span> <span class="token string">&quot;this <span class="token variable">$BAK_DIR</span> is exits..,&quot;</span>
+<span class="token keyword">fi</span>
+<span class="token variable">$MYSQLCMD</span> -u<span class="token variable">$MYSQLUSR</span> -p<span class="token variable">$MYSQLPW</span> <span class="token variable">$MYSQLDB</span><span class="token operator">&gt;</span><span class="token variable">$BAK_DIR</span>/<span class="token variable">$MYSQLDB</span>.sql
+<span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token variable">$?</span> -eq <span class="token number">0</span> <span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token keyword">then</span>
+	<span class="token builtin class-name">echo</span> -e <span class="token string">&quot;<span class="token entity" title="\033">\033</span>[32mthe mysql Backup <span class="token variable">$MYSQLDB</span> successfully<span class="token entity" title="\033">\033</span>[0m&quot;</span>
+<span class="token keyword">else</span>
+	<span class="token builtin class-name">echo</span> -e <span class="token string">&quot;<span class="token entity" title="\033">\033</span>[32mthe mysql backup <span class="token variable">$MYSQLDB</span> failed<span class="token entity" title="\033">\033</span>[0m&quot;</span>	
+<span class="token keyword">fi</span>
+</code></pre></div><h2 id="mysql自动安装"><a href="#mysql自动安装" class="header-anchor">#</a> mysql自动安装</h2> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token shebang important">#!/bin/bash</span>
+<span class="token comment">#by zjl 2019-11</span>
+<span class="token comment">#自动安装mysql</span>
+<span class="token assign-left variable">mysqlYum</span><span class="token operator">=</span>mysql80-community-release-el7-1.noarch.rpm
+<span class="token assign-left variable">mysqlPassword</span><span class="token operator">=</span><span class="token string">&quot;a654321B&quot;</span>
+
+<span class="token builtin class-name">echo</span> -e <span class="token string">&quot;<span class="token entity" title="\033">\033</span>[32m是否卸载mysql?<span class="token entity" title="\033">\033</span>[0m&quot;</span>
+<span class="token keyword">select</span> <span class="token for-or-select variable">i</span> <span class="token keyword">in</span> <span class="token string">&quot;卸载mysql&quot;</span> <span class="token string">&quot;不卸载mysql&quot;</span>
+<span class="token keyword">do</span>
+    <span class="token keyword">case</span> <span class="token variable">$i</span> <span class="token keyword">in</span> 
+        <span class="token string">&quot;卸载mysql&quot;</span><span class="token punctuation">)</span>
+            <span class="token builtin class-name">echo</span> -e  <span class="token string">&quot;<span class="token entity" title="\033">\033</span>[32mYour choice is 卸载mysql<span class="token entity" title="\033">\033</span>[0m&quot;</span>
+		<span class="token keyword">for</span> <span class="token for-or-select variable">name</span> <span class="token keyword">in</span> <span class="token variable"><span class="token variable">`</span>yum list installed<span class="token operator">|</span><span class="token function">grep</span> mysql<span class="token operator">|</span><span class="token function">awk</span> <span class="token string">'{ print <span class="token variable">$1</span> }'</span><span class="token variable">`</span></span>
+		<span class="token keyword">do</span>
+			yum remove <span class="token variable">$name</span>
+		<span class="token keyword">done</span>
+	<span class="token builtin class-name">break</span>
+        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+        <span class="token string">&quot;不卸载mysql&quot;</span><span class="token punctuation">)</span>
+            <span class="token builtin class-name">echo</span> -e  <span class="token string">&quot;<span class="token entity" title="\033">\033</span>[32mYour choice is 不卸载mysql<span class="token entity" title="\033">\033</span>[0m&quot;</span>
+	<span class="token builtin class-name">break</span>
+        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+    <span class="token keyword">esac</span>
+<span class="token keyword">done</span>
+
+
+<span class="token builtin class-name">echo</span> -e <span class="token string">&quot;<span class="token entity" title="\033">\033</span>[32m是否删除mysql系统文件?<span class="token entity" title="\033">\033</span>[0m&quot;</span>
+<span class="token keyword">select</span> <span class="token for-or-select variable">i</span> <span class="token keyword">in</span> <span class="token string">&quot;删除mysql系统文件&quot;</span> <span class="token string">&quot;不删除mysql系统文件&quot;</span>
+<span class="token keyword">do</span>
+    <span class="token keyword">case</span> <span class="token variable">$i</span> <span class="token keyword">in</span> 
+        <span class="token string">&quot;删除mysql系统文件&quot;</span><span class="token punctuation">)</span>
+            <span class="token builtin class-name">echo</span> -e  <span class="token string">&quot;<span class="token entity" title="\033">\033</span>[32mYour choice is 删除mysql系统文件<span class="token entity" title="\033">\033</span>[0m&quot;</span>
+        	
+        	<span class="token function">rm</span> -rf /var/lib/mysql
+	<span class="token builtin class-name">break</span>
+        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+        <span class="token string">&quot;不删除mysql系统文件&quot;</span><span class="token punctuation">)</span>
+            <span class="token builtin class-name">echo</span> -e  <span class="token string">&quot;<span class="token entity" title="\033">\033</span>[32mYour choice is 不删除mysql系统文件<span class="token entity" title="\033">\033</span>[0m&quot;</span>
+	<span class="token builtin class-name">break</span>
+        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+    <span class="token keyword">esac</span>
+<span class="token keyword">done</span>
+
+<span class="token builtin class-name">echo</span> -e <span class="token string">&quot;<span class="token entity" title="\033">\033</span>[32m是否确定安装mysql？<span class="token entity" title="\033">\033</span>[0m&quot;</span>
+<span class="token keyword">select</span> <span class="token for-or-select variable">i</span> <span class="token keyword">in</span> <span class="token string">&quot;是&quot;</span> <span class="token string">&quot;否&quot;</span>
+<span class="token keyword">do</span>
+    <span class="token keyword">case</span> <span class="token variable">$i</span> <span class="token keyword">in</span> 
+        <span class="token string">&quot;是&quot;</span><span class="token punctuation">)</span>
+            <span class="token builtin class-name">echo</span> -e  <span class="token string">&quot;<span class="token entity" title="\033">\033</span>[32mYour choice is 是<span class="token entity" title="\033">\033</span>[0m&quot;</span>
+
+		<span class="token function">wget</span> -i -c  https://repo.mysql.com//<span class="token variable">$mysqlYum</span>
+		yum -y <span class="token function">install</span> <span class="token variable">$mysqlYum</span>
+		yum -y <span class="token function">install</span> mysql-community-server
+		systemctl start  mysqld.service
+
+		<span class="token assign-left variable">findMysqlProcess</span><span class="token operator">=</span>false
+		<span class="token keyword">for</span> <span class="token for-or-select variable">str2</span> <span class="token keyword">in</span> <span class="token variable"><span class="token variable">`</span>systemctl status mysqld.service<span class="token operator">|</span><span class="token function">awk</span> <span class="token string">'{ print <span class="token variable">$2</span>}'</span><span class="token variable">`</span></span>
+ 		<span class="token keyword">do</span> 
+			<span class="token keyword">if</span> <span class="token punctuation">[</span><span class="token punctuation">[</span> <span class="token string">&quot;<span class="token variable">$str2</span>&quot;</span> <span class="token operator">==</span> <span class="token string">&quot;active&quot;</span> <span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token keyword">then</span>
+				<span class="token assign-left variable">findMysqlProcess</span><span class="token operator">=</span>true
+			<span class="token keyword">fi</span>
+ 		<span class="token keyword">done</span>
+
+		<span class="token keyword">if</span> <span class="token punctuation">[</span><span class="token punctuation">[</span> <span class="token variable">$findMysqlProcess</span> <span class="token operator">==</span> <span class="token boolean">false</span> <span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token keyword">then</span>
+			<span class="token builtin class-name">echo</span> -e <span class="token string">&quot; mysql error&quot;</span>
+			<span class="token builtin class-name">exit</span>	
+		<span class="token keyword">fi</span>
+		systemctl <span class="token builtin class-name">enable</span> mysqld
+                systemctl daemon-reload
+	<span class="token builtin class-name">break</span>
+        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+        <span class="token string">&quot;否&quot;</span><span class="token punctuation">)</span>
+            <span class="token builtin class-name">echo</span> -e  <span class="token string">&quot;<span class="token entity" title="\033">\033</span>[32mYour choice is 否<span class="token entity" title="\033">\033</span>[0m&quot;</span>
+	<span class="token builtin class-name">break</span>
+        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+    <span class="token keyword">esac</span>
+<span class="token keyword">done</span>
+<span class="token operator">!</span>
+<span class="token assign-left variable">oldPassword</span><span class="token operator">=</span><span class="token number">0</span>
+<span class="token builtin class-name">echo</span> -e <span class="token string">&quot;<span class="token entity" title="\033">\033</span>[32m是否知道mysql初始密码?<span class="token entity" title="\033">\033</span>[0m&quot;</span>
+<span class="token keyword">select</span> <span class="token for-or-select variable">i</span> <span class="token keyword">in</span> <span class="token string">&quot;是&quot;</span> <span class="token string">&quot;否&quot;</span>
+<span class="token keyword">do</span>
+    <span class="token keyword">case</span> <span class="token variable">$i</span> <span class="token keyword">in</span> 
+        <span class="token string">&quot;是&quot;</span><span class="token punctuation">)</span>
+            <span class="token builtin class-name">echo</span> -e  <span class="token string">&quot;<span class="token entity" title="\033">\033</span>[32mYour choice is 是<span class="token entity" title="\033">\033</span>[0m&quot;</span>
+	    <span class="token builtin class-name">read</span> -p <span class="token string">&quot;please input password:&quot;</span> oldPassword
+	<span class="token builtin class-name">break</span>
+        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+        <span class="token string">&quot;否&quot;</span><span class="token punctuation">)</span>
+            <span class="token builtin class-name">echo</span> -e  <span class="token string">&quot;<span class="token entity" title="\033">\033</span>[32mYour choice is 否<span class="token entity" title="\033">\033</span>[0m&quot;</span>
+		
+	    <span class="token keyword">for</span> <span class="token for-or-select variable">password</span> <span class="token keyword">in</span> <span class="token variable"><span class="token variable">`</span><span class="token function">grep</span> <span class="token string">'temporary password'</span> /var/log/mysqld.log<span class="token operator">|</span><span class="token function">awk</span>  <span class="token string">'{ print <span class="token variable">$13</span>}'</span><span class="token variable">`</span></span>
+		<span class="token keyword">do</span>
+	             <span class="token keyword">if</span> <span class="token punctuation">[</span><span class="token punctuation">[</span> <span class="token variable">$mysqlPassword</span> <span class="token operator">==</span> <span class="token number">0</span> <span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token keyword">then</span>
+	        	<span class="token assign-left variable">oldPassword</span><span class="token operator">=</span><span class="token variable">$password</span>
+   	             <span class="token keyword">fi</span>
+	        <span class="token keyword">done</span>
+
+	<span class="token builtin class-name">break</span>
+        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+    <span class="token keyword">esac</span>
+<span class="token keyword">done</span>
+
+<span class="token assign-left variable">sql</span><span class="token operator">=</span><span class="token string">&quot;set global validate_password.policy=0;set global validate_password.length=1;ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY '<span class="token variable">$mysqlPassword</span>';use mysql;update user set host='%' where user ='root';FLUSH PRIVILEGES;GRANT ALL PRIVILEGES ON *.* TO 'root'@'%'WITH GRANT OPTION;&quot;</span>
+mysql -uroot -p<span class="token variable">$oldPassword</span> -e<span class="token string">&quot;<span class="token variable">$sql</span>&quot;</span>
+
+
+
+
+<span class="token comment">#关闭mysql</span>
+<span class="token comment">#for pid in `ps -ef|grep mysql|grep -v grep|grep -v PPID|grep -v sh|awk '{ print $2}'`</span>
+<span class="token comment">#do </span>
+<span class="token comment">#	kill -9 $pid </span>
+<span class="token comment">#done</span>
+
+
+<span class="token comment">#卸载mysql</span>
+<span class="token comment">#for name in `yum list installed|grep mysql|awk '{ print $1 }'`</span>
+<span class="token comment">#do</span>
+<span class="token comment">#	yum remove $name</span>
+<span class="token comment">#done</span>
+
+<span class="token comment">#rm -rf /var/lib/mysql</span>
+<span class="token comment">#for name in `find / -name mysql`</span>
+<span class="token comment">#do </span>
+<span class="token comment"># echo $name</span>
+<span class="token comment">#done</span>
+<span class="token comment">#wget -i -c  https://repo.mysql.com//$mysqlYum</span>
+<span class="token comment">#yum -y install $mysqlYum</span>
+<span class="token comment">#yum -y install mysql-community-server</span>
+<span class="token comment">#systemctl start  mysqld.service</span>
+<span class="token comment">#systemctl status mysqld.service</span>
+:<span class="token operator">&lt;&lt;</span><span class="token operator">!</span>
+<span class="token assign-left variable">findMysqlProcess</span><span class="token operator">=</span>false
+<span class="token keyword">for</span> <span class="token for-or-select variable">str2</span> <span class="token keyword">in</span> <span class="token variable"><span class="token variable">`</span>systemctl status mysqld.service<span class="token operator">|</span><span class="token function">awk</span> <span class="token string">'{ print <span class="token variable">$2</span>}'</span><span class="token variable">`</span></span>
+ <span class="token keyword">do</span> 
+	<span class="token keyword">if</span> <span class="token punctuation">[</span><span class="token punctuation">[</span> <span class="token string">&quot;<span class="token variable">$str2</span>&quot;</span> <span class="token operator">==</span> <span class="token string">&quot;active&quot;</span> <span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token keyword">then</span>
+		<span class="token assign-left variable">findMysqlProcess</span><span class="token operator">=</span>true
+	<span class="token keyword">fi</span>
+ <span class="token keyword">done</span>
+
+<span class="token keyword">if</span> <span class="token punctuation">[</span><span class="token punctuation">[</span> <span class="token variable">$findMysqlProcess</span> <span class="token operator">==</span> <span class="token boolean">false</span> <span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token keyword">then</span>
+	<span class="token builtin class-name">echo</span> -e <span class="token string">&quot; mysql error&quot;</span>
+	<span class="token builtin class-name">exit</span>	
+<span class="token keyword">fi</span>
+systemctl <span class="token builtin class-name">enable</span> mysqld
+systemctl daemon-reload
+
+
+<span class="token keyword">for</span> <span class="token for-or-select variable">password</span> <span class="token keyword">in</span> <span class="token variable"><span class="token variable">`</span><span class="token function">grep</span> <span class="token string">'temporary password'</span> /var/log/mysqld.log<span class="token operator">|</span><span class="token function">awk</span>  <span class="token string">'{ print <span class="token variable">$13</span>}'</span><span class="token variable">`</span></span>
+<span class="token keyword">do</span>
+	<span class="token keyword">if</span> <span class="token punctuation">[</span><span class="token punctuation">[</span> <span class="token variable">$mysqlPassword</span> <span class="token operator">==</span> <span class="token number">0</span> <span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token keyword">then</span>
+		<span class="token assign-left variable">mysqlPassword</span><span class="token operator">=</span><span class="token variable">$password</span>
+	<span class="token keyword">fi</span>
+<span class="token keyword">done</span>
+
+
+<span class="token assign-left variable">sql</span><span class="token operator">=</span><span class="token string">&quot;set global validate_password.policy=0;set global validate_password.length=1;ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY 'a654321B';use mysql;update user set host='%' where user ='root';FLUSH PRIVILEGES;GRANT ALL PRIVILEGES ON *.* TO 'root'@'%'WITH GRANT OPTION;&quot;</span>
+mysql -uroot -p<span class="token variable">$mysqlPassword</span> -e<span class="token string">&quot;<span class="token variable">$sql</span>&quot;</span>
+
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;11111111111111&quot;</span>
+
+<span class="token operator">!</span>
+
+</code></pre></div><h2 id="redis自动安装"><a href="#redis自动安装" class="header-anchor">#</a> redis自动安装</h2> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token shebang important">#!/bin/bash</span>
+<span class="token comment">#auto install redis</span>
+<span class="token comment">#by zjl 2019-11</span>
+<span class="token comment">#参考文档:https://blog.csdn.net/u012198893/article/details/97114216</span>
+<span class="token assign-left variable">redisFiles</span><span class="token operator">=</span>redis-5.0.5.tar.gz
+<span class="token assign-left variable">redisFilesDir</span><span class="token operator">=</span>redis-5.0.5
+<span class="token assign-left variable">redisUrl</span><span class="token operator">=</span>http://download.redis.io/releases
+<span class="token assign-left variable">redisPrefix</span><span class="token operator">=</span>/usr/local/redis
+
+<span class="token function">rm</span> -rf <span class="token variable">$redisPrefix</span>
+<span class="token function">wget</span> -c <span class="token variable">$redisUrl</span>/<span class="token variable">$redisFiles</span> <span class="token operator">&amp;&amp;</span> <span class="token function">tar</span> -zxvf <span class="token variable">$redisFiles</span> <span class="token operator">&amp;&amp;</span> <span class="token builtin class-name">cd</span> <span class="token variable">$redisFilesDir</span>/src <span class="token operator">&amp;&amp;</span> <span class="token function">make</span> <span class="token function">install</span> <span class="token assign-left variable">PREFIX</span><span class="token operator">=</span><span class="token variable">$redisPrefix</span>
+<span class="token builtin class-name">cd</span> <span class="token punctuation">..</span>
+<span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token variable">$?</span> -eq <span class="token number">0</span> <span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token keyword">then</span>
+	 <span class="token function">mkdir</span> <span class="token variable">$redisPrefix</span>/etc <span class="token operator">&amp;&amp;</span> <span class="token function">cp</span> redis.conf <span class="token variable">$redisPrefix</span>/etc/
+	<span class="token builtin class-name">echo</span> -e <span class="token string">&quot;<span class="token entity" title="\033">\033</span>[32m this redis install success<span class="token entity" title="\033">\033</span>[0m&quot;</span>
+<span class="token keyword">else</span>
+	<span class="token builtin class-name">echo</span> -e <span class="token string">&quot;<span class="token entity" title="\033">\033</span>[32m this redis install error<span class="token entity" title="\033">\033</span>[0m&quot;</span>
+	<span class="token builtin class-name">exit</span> <span class="token number">0</span>
+<span class="token keyword">fi</span>
+
+<span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token variable">$?</span> -eq <span class="token number">0</span> <span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token keyword">then</span>
+	<span class="token comment">#sed -i 's/原字符串/新字符串/g' /home/1.txt</span>
+	<span class="token function">sed</span> -i <span class="token string">&quot;s/bind 127.0.0.1/# bind 127.0.0.1/g&quot;</span> <span class="token variable">$redisPrefix</span>/etc/redis.conf
+	<span class="token function">sed</span> -i <span class="token string">&quot;s/daemonize no/daemonize yes/g&quot;</span> <span class="token variable">$redisPrefix</span>/etc/redis.conf
+	<span class="token function">sed</span> -i <span class="token string">&quot;s#dir \.\/#dir <span class="token variable">$redisPrefix</span>/rdb/#g&quot;</span> <span class="token variable">$redisPrefix</span>/etc/redis.conf
+	<span class="token function">sed</span> -i <span class="token string">&quot;s#logfile <span class="token entity" title="\&quot;">\&quot;</span><span class="token entity" title="\&quot;">\&quot;</span>#logfile <span class="token variable">$redisPrefix</span>\/log\/redis_log.log#g&quot;</span> <span class="token variable">$redisPrefix</span>/etc/redis.conf
+	<span class="token function">sed</span> -i <span class="token string">&quot;s/# requirepass foobared/requirepass 123456/g&quot;</span> <span class="token variable">$redisPrefix</span>/etc/redis.conf
+       	<span class="token builtin class-name">echo</span> -e <span class="token string">&quot;<span class="token entity" title="\033">\033</span>[32m this redis move config success<span class="token entity" title="\033">\033</span>[0m&quot;</span>
+<span class="token keyword">else</span>
+	<span class="token builtin class-name">echo</span> -e <span class="token string">&quot;<span class="token entity" title="\033">\033</span>[32m this redis move config error<span class="token entity" title="\033">\033</span>[0m&quot;</span>
+	<span class="token builtin class-name">exit</span> <span class="token number">0</span>
+<span class="token keyword">fi</span>
+<span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token variable">$?</span> -eq <span class="token number">0</span> <span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token keyword">then</span>
+	<span class="token function">mkdir</span> <span class="token variable">$redisPrefix</span>/log <span class="token operator">&amp;&amp;</span> <span class="token function">touch</span> <span class="token variable">$redisPrefix</span>/log/redis_log.log <span class="token operator">&amp;&amp;</span> <span class="token function">chmod</span> a+w <span class="token variable">$redisPrefix</span>/log/redis_log.log <span class="token operator">&amp;&amp;</span> <span class="token function">mkdir</span> <span class="token variable">$redisPrefix</span>/rdb <span class="token operator">&amp;&amp;</span> <span class="token function">chmod</span> a+w <span class="token variable">$redisPrefix</span>/rdb/
+	<span class="token builtin class-name">echo</span> -e <span class="token string">&quot;<span class="token entity" title="\033">\033</span>[32m this redis update config success<span class="token entity" title="\033">\033</span>[0m&quot;</span>
+<span class="token keyword">else</span>
+	<span class="token builtin class-name">echo</span> -e <span class="token string">&quot;<span class="token entity" title="\033">\033</span>[32m this redis update config error<span class="token entity" title="\033">\033</span>[0m&quot;</span>
+	<span class="token builtin class-name">exit</span> <span class="token number">0</span>
+<span class="token keyword">fi</span>
+<span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token variable">$?</span> -eq <span class="token number">0</span> <span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token keyword">then</span>
+	<span class="token builtin class-name">echo</span> -e <span class="token string">&quot;<span class="token entity" title="\033">\033</span>[32m this redis finally  success!!!<span class="token entity" title="\033">\033</span>[0m&quot;</span>
+<span class="token keyword">else</span>
+	<span class="token builtin class-name">echo</span> -e <span class="token string">&quot;<span class="token entity" title="\033">\033</span>[32m this redis mkdir  error<span class="token entity" title="\033">\033</span>[0m&quot;</span>
+	<span class="token builtin class-name">exit</span> <span class="token number">0</span>
+<span class="token keyword">fi</span>
+</code></pre></div><h2 id="mongodb自动安装"><a href="#mongodb自动安装" class="header-anchor">#</a> mongodb自动安装</h2> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment">#################################</span>
+<span class="token comment">#Author:         zjl #</span>
+<span class="token comment">#Version:                    #</span>
+<span class="token comment">#Mail:   772945866@qq.com          #</span>
+<span class="token comment">#Date:           2019-11-28       #</span>
+<span class="token comment">#Description:                #</span>
+<span class="token comment">#                            #</span>
+<span class="token comment">#################################</span>
+ 
+<span class="token comment">#!/bin/bash</span>
+
+
+
+<span class="token assign-left variable">mongoDBUrl</span><span class="token operator">=</span>https://fastdl.mongodb.org/linux/
+<span class="token assign-left variable">mongoDBVersion</span><span class="token operator">=</span>mongodb-linux-x86_64-4.0.0
+<span class="token assign-left variable">mongoDBFileType</span><span class="token operator">=</span>.tgz
+<span class="token comment">#下载并安装mongodb</span>
+
+<span class="token function-name function">DownInstallMongo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	<span class="token function">wget</span> -c <span class="token variable">$mongoDBUrl</span><span class="token variable">$mongoDBVersion</span><span class="token variable">$mongoDBFileType</span> <span class="token operator">&amp;&amp;</span> <span class="token function">tar</span> zxvf <span class="token variable">$mongoDBVersion</span><span class="token variable">$mongoDBFileType</span> <span class="token operator">&amp;&amp;</span>  <span class="token function">mv</span> <span class="token variable">$mongoDBVersion</span> /usr/mongodb
+
+
+
+<span class="token punctuation">}</span>
+<span class="token function-name function">SetMongo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+	<span class="token function">sed</span> -i <span class="token string">'/export PATH USER LOGNAME MAIL HOSTNAME HISTSIZE HISTCONTROL/iexport PATH=\/usr\/mongodb\/bin:<span class="token environment constant">$PATH</span>'</span> /etc/profile
+
+
+	<span class="token builtin class-name">source</span> /etc/profile <span class="token operator">&amp;&amp;</span> <span class="token builtin class-name">cd</span> /usr/mongodb <span class="token operator">&amp;&amp;</span> <span class="token function">touch</span> mongodb.conf <span class="token operator">&amp;&amp;</span> <span class="token function">mkdir</span> db <span class="token operator">&amp;&amp;</span> <span class="token function">mkdir</span> log <span class="token operator">&amp;&amp;</span> <span class="token function">chmod</span> <span class="token number">777</span> db <span class="token operator">&amp;&amp;</span> <span class="token function">chmod</span> <span class="token number">777</span> log <span class="token operator">&amp;&amp;</span> <span class="token builtin class-name">cd</span> log <span class="token operator">&amp;&amp;</span> <span class="token function">touch</span> mongodb.log
+
+	<span class="token assign-left variable">mongoConf</span><span class="token operator">=</span><span class="token string">&quot;port=27017 #端口<span class="token entity" title="\n">\n</span>
+dbpath= /usr/mongodb/db #数据库存文件存放目录<span class="token entity" title="\n">\n</span>
+logpath= /usr/mongodb/log/mongodb.log #日志文件存放路径<span class="token entity" title="\n">\n</span>
+logappend=true #使用追加的方式写日志<span class="token entity" title="\n">\n</span>
+fork=true #以守护进程的方式运行，创建服务器进程<span class="token entity" title="\n">\n</span>
+maxConns=100 #最大同时连接数<span class="token entity" title="\n">\n</span>
+#noauth=true #不启用验证<span class="token entity" title="\n">\n</span>
+journal=true #每次写入会记录一条操作日志（通过journal可以重新构造出写入的数据）。<span class="token entity" title="\n">\n</span>
+#即使宕机，启动时wiredtiger会先将数据恢复到最近一次的checkpoint点，然后重放后续的journal日志来恢复。<span class="token entity" title="\n">\n</span>
+storageEngine=wiredTiger  #存储引擎有mmapv1、wiretiger、mongorocks<span class="token entity" title="\n">\n</span>
+bind_ip = 0.0.0.0  #这样就可外部访问了，例如从win10中去连虚拟机中的MongoDB<span class="token entity" title="\n">\n</span>
+auth = true #用户认证<span class="token entity" title="\n">\n</span>
+&quot;</span>
+
+
+	<span class="token builtin class-name">echo</span> -e  <span class="token variable">$mongoConf</span> <span class="token operator">&gt;</span> /usr/mongodb/mongodb.conf
+
+<span class="token punctuation">}</span>
+<span class="token function-name function">StartMongo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	<span class="token assign-left variable">pid</span><span class="token operator">=</span><span class="token variable"><span class="token variable">`</span><span class="token function">ps</span> -aux<span class="token operator">|</span><span class="token function">grep</span> mongod <span class="token operator">|</span><span class="token function">grep</span> -v <span class="token function">grep</span><span class="token operator">|</span><span class="token function">grep</span> -v <span class="token function">sh</span><span class="token operator">|</span><span class="token function">awk</span> <span class="token string">'{print <span class="token variable">$2</span>}'</span><span class="token variable">`</span></span>
+	<span class="token function">kill</span> -9 <span class="token variable">$pid</span> <span class="token operator">&amp;&amp;</span>  mongod -f /usr/mongodb/mongodb.conf
+
+<span class="token punctuation">}</span>
+<span class="token function-name function">SetMongo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+mongo  <span class="token operator">&lt;&lt;</span><span class="token string">EOF
+use admin
+
+db.createUser({user:&quot;admin&quot;,pwd:&quot;123456&quot;,roles:[&quot;root&quot;]})
+
+db.auth(&quot;admin&quot;, &quot;123456&quot;)
+
+use test
+
+db.createUser({user: &quot;test&quot;, pwd: &quot;123456&quot;, roles: [{ role: &quot;dbOwner&quot;, db: &quot;test&quot; }]})
+
+
+EOF</span>
+<span class="token punctuation">}</span>
+
+DownInstallMongo
+SetMongo
+StartMongo
+SetMongo
+
+
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">更新时间:</span> <span class="time">2020年4月19日星期日下午12点32分</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/opersystem/linux/" class="prev router-link-active">
+        linux
+      </a></span> <!----></p></div>  <!----></main></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/assets/js/app.29834792.js" defer></script><script src="/assets/js/6.a4c4b5d6.js" defer></script><script src="/assets/js/2.1492d491.js" defer></script><script src="/assets/js/27.e332d1a2.js" defer></script><script src="/assets/js/3.90399333.js" defer></script>
+  </body>
+</html>

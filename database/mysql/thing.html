@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>事务 | 一朝春诔</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    <link rel="icon" href="assets/img/favicon.ico">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icons/icon-152x152.png">
+    <meta name="description" content="一朝春诔的学习笔记">
+    <meta name="author" content="一朝春诔">
+    <meta name="keywords" content="vuepress介绍，vuepress说明，一朝春诔">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="icons/icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    <link rel="preload" href="/assets/css/0.styles.27faccf6.css" as="style"><link rel="preload" href="/assets/js/app.29834792.js" as="script"><link rel="preload" href="/assets/js/6.a4c4b5d6.js" as="script"><link rel="preload" href="/assets/js/2.1492d491.js" as="script"><link rel="preload" href="/assets/js/22.1380ca7e.js" as="script"><link rel="preload" href="/assets/js/3.90399333.js" as="script"><link rel="prefetch" href="/assets/js/10.87145463.js"><link rel="prefetch" href="/assets/js/11.1918620a.js"><link rel="prefetch" href="/assets/js/12.6cce430e.js"><link rel="prefetch" href="/assets/js/13.efa48d13.js"><link rel="prefetch" href="/assets/js/14.27d23835.js"><link rel="prefetch" href="/assets/js/15.6a4bd2a2.js"><link rel="prefetch" href="/assets/js/16.963c7d28.js"><link rel="prefetch" href="/assets/js/17.8e7d945e.js"><link rel="prefetch" href="/assets/js/18.8693db43.js"><link rel="prefetch" href="/assets/js/19.42cce320.js"><link rel="prefetch" href="/assets/js/20.6b2f826c.js"><link rel="prefetch" href="/assets/js/21.54a5a5f4.js"><link rel="prefetch" href="/assets/js/23.5ae06d94.js"><link rel="prefetch" href="/assets/js/24.30ae2ad2.js"><link rel="prefetch" href="/assets/js/25.b5403e58.js"><link rel="prefetch" href="/assets/js/26.f3821ce8.js"><link rel="prefetch" href="/assets/js/27.e332d1a2.js"><link rel="prefetch" href="/assets/js/28.4f0a4b4d.js"><link rel="prefetch" href="/assets/js/29.aa1f0085.js"><link rel="prefetch" href="/assets/js/30.74d62b1b.js"><link rel="prefetch" href="/assets/js/31.0240618c.js"><link rel="prefetch" href="/assets/js/32.5e0c99bc.js"><link rel="prefetch" href="/assets/js/33.9a2cc730.js"><link rel="prefetch" href="/assets/js/34.11a5e517.js"><link rel="prefetch" href="/assets/js/35.30fcd52f.js"><link rel="prefetch" href="/assets/js/36.d92c317f.js"><link rel="prefetch" href="/assets/js/37.48f65213.js"><link rel="prefetch" href="/assets/js/38.4229672d.js"><link rel="prefetch" href="/assets/js/39.9ebbe2e7.js"><link rel="prefetch" href="/assets/js/4.ffd4e858.js"><link rel="prefetch" href="/assets/js/40.2062c717.js"><link rel="prefetch" href="/assets/js/41.f083e3b3.js"><link rel="prefetch" href="/assets/js/42.d9c0e07c.js"><link rel="prefetch" href="/assets/js/43.2dd4922c.js"><link rel="prefetch" href="/assets/js/44.f5de393c.js"><link rel="prefetch" href="/assets/js/45.c82cb76e.js"><link rel="prefetch" href="/assets/js/46.65eb29c3.js"><link rel="prefetch" href="/assets/js/47.2ae4fd4e.js"><link rel="prefetch" href="/assets/js/5.0000f2bd.js"><link rel="prefetch" href="/assets/js/7.be7c9864.js"><link rel="prefetch" href="/assets/js/8.e855ae57.js"><link rel="prefetch" href="/assets/js/9.a7df38a9.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.27faccf6.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">一朝春诔</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/backend/golang/" class="nav-link">
+  golang
+</a></li><li class="dropdown-item"><!----> <a href="/backend/python/" class="nav-link">
+  python
+</a></li><li class="dropdown-item"><!----> <a href="/backend/cplus/" class="nav-link">
+  c++
+</a></li><li class="dropdown-item"><!----> <a href="/backend/lua/" class="nav-link">
+  lua
+</a></li><li class="dropdown-item"><!----> <a href="/backend/vba/" class="nav-link">
+  vba
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/database/mysql/" class="nav-link router-link-active">
+  mysql
+</a></li><li class="dropdown-item"><!----> <a href="/database/mongodb/" class="nav-link">
+  mongodb
+</a></li><li class="dropdown-item"><!----> <a href="/database/redis/" class="nav-link">
+  redis
+</a></li><li class="dropdown-item"><!----> <a href="/database/etcd/" class="nav-link">
+  etcd
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">编程基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/programming/algo/" class="nav-link">
+  算法与数据结构
+</a></li><li class="dropdown-item"><!----> <a href="/programming/pattern/" class="nav-link">
+  设计模式
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="操作系统" class="dropdown-title"><span class="title">操作系统</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/opersystem/windows/" class="nav-link">
+  windows
+</a></li><li class="dropdown-item"><!----> <a href="/opersystem/linux/" class="nav-link">
+  linux
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发工具" class="dropdown-title"><span class="title">开发工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/tool/git/" class="nav-link">
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/tool/goland/" class="nav-link">
+  goland
+</a></li><li class="dropdown-item"><!----> <a href="/tool/vscode/" class="nav-link">
+  vscode
+</a></li><li class="dropdown-item"><!----> <a href="/tool/pycharm/" class="nav-link">
+  pycharm
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/other/nginx/" class="nav-link">
+  nginx
+</a></li><li class="dropdown-item"><!----> <a href="/other/rabbitmq/" class="nav-link">
+  rabbitmq
+</a></li><li class="dropdown-item"><!----> <a href="/other/docker/" class="nav-link">
+  docker
+</a></li><li class="dropdown-item"><!----> <a href="/other/k8s/" class="nav-link">
+  k8s
+</a></li><li class="dropdown-item"><!----> <a href="/other/workrecord/" class="nav-link">
+  工作记录
+</a></li><li class="dropdown-item"><!----> <a href="/other/interview/" class="nav-link">
+  面试宝典
+</a></li><li class="dropdown-item"><!----> <a href="/other/other/" class="nav-link">
+  其他
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/frontend/vue/" class="nav-link">
+  vue
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/jlinzhou" target="_self" rel="" class="nav-link external">
+  Github
+  <!----></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/backend/golang/" class="nav-link">
+  golang
+</a></li><li class="dropdown-item"><!----> <a href="/backend/python/" class="nav-link">
+  python
+</a></li><li class="dropdown-item"><!----> <a href="/backend/cplus/" class="nav-link">
+  c++
+</a></li><li class="dropdown-item"><!----> <a href="/backend/lua/" class="nav-link">
+  lua
+</a></li><li class="dropdown-item"><!----> <a href="/backend/vba/" class="nav-link">
+  vba
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/database/mysql/" class="nav-link router-link-active">
+  mysql
+</a></li><li class="dropdown-item"><!----> <a href="/database/mongodb/" class="nav-link">
+  mongodb
+</a></li><li class="dropdown-item"><!----> <a href="/database/redis/" class="nav-link">
+  redis
+</a></li><li class="dropdown-item"><!----> <a href="/database/etcd/" class="nav-link">
+  etcd
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">编程基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/programming/algo/" class="nav-link">
+  算法与数据结构
+</a></li><li class="dropdown-item"><!----> <a href="/programming/pattern/" class="nav-link">
+  设计模式
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="操作系统" class="dropdown-title"><span class="title">操作系统</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/opersystem/windows/" class="nav-link">
+  windows
+</a></li><li class="dropdown-item"><!----> <a href="/opersystem/linux/" class="nav-link">
+  linux
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发工具" class="dropdown-title"><span class="title">开发工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/tool/git/" class="nav-link">
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/tool/goland/" class="nav-link">
+  goland
+</a></li><li class="dropdown-item"><!----> <a href="/tool/vscode/" class="nav-link">
+  vscode
+</a></li><li class="dropdown-item"><!----> <a href="/tool/pycharm/" class="nav-link">
+  pycharm
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/other/nginx/" class="nav-link">
+  nginx
+</a></li><li class="dropdown-item"><!----> <a href="/other/rabbitmq/" class="nav-link">
+  rabbitmq
+</a></li><li class="dropdown-item"><!----> <a href="/other/docker/" class="nav-link">
+  docker
+</a></li><li class="dropdown-item"><!----> <a href="/other/k8s/" class="nav-link">
+  k8s
+</a></li><li class="dropdown-item"><!----> <a href="/other/workrecord/" class="nav-link">
+  工作记录
+</a></li><li class="dropdown-item"><!----> <a href="/other/interview/" class="nav-link">
+  面试宝典
+</a></li><li class="dropdown-item"><!----> <a href="/other/other/" class="nav-link">
+  其他
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/frontend/vue/" class="nav-link">
+  vue
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/jlinzhou" target="_self" rel="" class="nav-link external">
+  Github
+  <!----></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>mysql</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/database/mysql/" class="sidebar-link">mysql</a></li><li><a href="/database/mysql/lock.html" class="sidebar-link">锁</a></li><li><a href="/database/mysql/split.html" class="sidebar-link">分表分库</a></li><li><a href="/database/mysql/thing.html" class="active sidebar-link">事务</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="事务的基本要素"><a href="#事务的基本要素" class="header-anchor">#</a> 事务的基本要素</h3> <ol><li>原子性：事务是一个原子操作单元，其对数据的修改，要么全都执行，要么全都不执行</li> <li>一致性：事务开始前和结束后，数据库的完整性约束没有被破坏。</li> <li>隔离性：同一时间，只允许一个事务请求同一数据，不同的事务之间彼此没有任何干扰。</li> <li>持久性：事务完成后，事务对数据库的所有更新将被保存到数据库，不能回滚。</li></ol> <h3 id="事务的并发问题"><a href="#事务的并发问题" class="header-anchor">#</a> 事务的并发问题</h3> <ol><li><strong>脏读</strong>：事务A读取了事务B更新的数据，然后B回滚操作，那么A读取到的数据是脏数据</li> <li><strong>不可重复读</strong>：事务A多次读取同一数据，事务B在事务A多次读取的过程中，对数据作了更新并提交，导致事务A多次读取同一数据时，结果不一致。</li> <li><strong>幻读</strong>：A事务读取了B事务已经提交的新增数据。注意和不可重复读的区别，这里是新增，不可重复读是更改（或删除）。select某记录是否存在，不存在，准备插入此记录，但执行 insert 时发现此记录已存在，无法插入，此时就发生了幻读。</li></ol> <h3 id="mysql事务隔离级别"><a href="#mysql事务隔离级别" class="header-anchor">#</a> MySQL事务隔离级别</h3> <table><thead><tr><th>事务隔离级别</th> <th>脏读</th> <th>不可重复读</th> <th>幻读</th></tr></thead> <tbody><tr><td>读未提交</td> <td>是</td> <td>是</td> <td>是</td></tr> <tr><td>不可重复读</td> <td>否</td> <td>是</td> <td>是</td></tr> <tr><td>可重复读</td> <td>否</td> <td>否</td> <td>是</td></tr> <tr><td>串行化</td> <td>否</td> <td>否</td> <td>否</td></tr></tbody></table> <p>在MySQL可重复读的隔离级别中并不是完全解决了幻读的问题，而是解决了读数据情况下的幻读问题。而对于修改的操作依旧存在幻读问题，就是说MVCC对于幻读的解决时不彻底的。 通过索引加锁，间隙锁，next key lock可以解决幻读的问题。（即加共享锁lock in share mode或排他锁 for update）</p> <p>MySQL默认的**RR级别 **, <strong>REPEATABLE READ</strong></p> <h3 id="mysql的逻辑结构"><a href="#mysql的逻辑结构" class="header-anchor">#</a> Mysql的逻辑结构</h3> <ul><li>最上层的服务类似其他<strong>CS结构</strong>，比如连接处理，授权处理。</li> <li>第二层是<strong>Mysql的服务层</strong>，包括SQL的解析分析优化，存储过程触发器视图等也在这一层实现。</li> <li>最后一层是<strong>存储引擎的实现</strong>，类似于Java接口的实现，Mysql的执行器在执行SQL的时候只会关注API的调用，完全屏蔽了不同引擎实现间的差异。比如Select语句，先会判断当前用户是否拥有权限，其次到缓存（内存）查询是否有相应的结果集，如果没有再执行解析sql，优化生成执行计划，调用API执行。</li></ul> <h3 id="sql执行顺序"><a href="#sql执行顺序" class="header-anchor">#</a> SQL执行顺序</h3> <p>SQL的执行顺序：from---where--group by---having---select---order by</p> <h3 id="mvcc简介"><a href="#mvcc简介" class="header-anchor">#</a> MVCC简介</h3> <ol><li><p>什么是MVCC
+MVCC是一种<strong>多版本并发控制机制</strong>。</p></li> <li><p>MVCC是为了解决什么问题?
+大多数的MYSQL事务型存储引擎,如,InnoDB，Falcon以及PBXT都不使用一种简单的行锁机制.事实上,他们都和MVCC–多版本并发控制来一起使用.
+大家都应该知道,<strong>锁机制可以控制并发操作,但是其系统开销较大,而MVCC可以在大多数情况下代替行级锁,使用MVCC,能降低其系统开销.</strong></p></li> <li><p>MVCC实现
+<strong>MVCC是通过保存数据在某个时间点的快照来实现的</strong>. 不同存储引擎的MVCC. 不同存储引擎的MVCC实现是不同的,典型的有乐观并发控制和悲观并发控制.</p></li> <li><p>MVCC 具体实现分析
+下面,我们通过InnoDB的MVCC实现来分析MVCC使怎样进行并发控制的.
+InnoDB的MVCC，是通过在每行记录后面保存<strong>两个隐藏的列</strong>来实现的.</p> <p>1.DATA_TRX_ID表示最近修改该行数据的**事务ID **</p> <p>2.DATA_ROLL_PTR则表示指向<strong>该行回滚段的指针</strong>，该行上所有旧的版本，在undo中都通过链表的形式组织，而该值，正式指向undo中该行的历史记录链表</p> <p>(这两个列，分别保存了这个行的<strong>创建时间</strong>，一个保存的是行的<strong>删除时间</strong>。这里存储的并不是实际的时间值,而是系统版本号(可以理解为事务的ID)，每开始一个新的事务，系统版本号就会自动递增，事务开始时刻的系统版本号会作为事务的ID.下面看一下在REPEATABLE READ隔离级别下,MVCC具体是如何操作的.)</p> <p>原文链接：https://blog.csdn.net/whoamiyang/article/details/51901888</p></li></ol> <p>undoLog 也就是我们常说的回滚日志文件 主要用于事务中执行失败，进行回滚</p> <p>redoLog 是重做日志文件是记录数据修改之后的值，用于持久化到磁盘中</p> <p>binlog由Mysql的Server层实现,是逻辑日志,记录的是sql语句的原始逻辑</p> <h3 id="innodb的行锁模式"><a href="#innodb的行锁模式" class="header-anchor">#</a> InnoDB的行锁模式</h3> <p>​	共享锁为读锁，只用于表级 ，本次事务可以读不能写，其他事务只能读。 lock in share mode.</p> <p>​	排他锁为写锁， 用于行级 ，本次事务可以读可以写，其他事务增删改查都不行。 for update .</p> <h3 id="mysql如何保证一致性和持久性"><a href="#mysql如何保证一致性和持久性" class="header-anchor">#</a> Mysql如何保证一致性和持久性</h3> <p>MySQL为了保证ACID中的一致性和持久性，使用了WAL(Write-Ahead Logging,<strong>先写日志再写磁盘</strong>)。Redo log就是一种WAL的应用。当数据库忽然掉电，再重新启动时，MySQL可以通过Redo log还原数据。也就是说，每次事务提交时，不用同步刷新磁盘数据文件，只需要同步刷新Redo log就足够了。</p> <h3 id="为什么选择b-树作为索引结构"><a href="#为什么选择b-树作为索引结构" class="header-anchor">#</a> 为什么选择B+树作为索引结构</h3> <ul><li>Hash索引：Hash索引底层是哈希表，哈希表是一种以key-value存储数据的结构，所以多个数据在存储关系上是完全没有任何顺序关系的，所以，对于<strong>区间查询是无法直接通过索引查询的</strong>，就需要全表扫描。所以，哈希索引只适用于等值查询的场景。而B+ 树是一种<strong>多路平衡查询树，所以他的节点是天然有序的</strong>（左子节点小于父节点、父节点小于右子节点），所以对于范围查询的时候不需要做全表扫描</li> <li>二叉查找树：<strong>解决了排序的基本问题</strong>，但是由于<strong>无法保证平衡</strong>，可能退化为链表。</li> <li>平衡二叉树：<strong>通过旋转解决了平衡的问题</strong>，但是<strong>旋转操作效率太低</strong>。</li> <li>红黑树：通过舍弃严格的平衡和引入红黑节点，解决了	<strong>AVL旋转效率过低</strong>的问题，但是在磁盘等场景下，<strong>树仍然太高，IO次数太多</strong>。</li> <li>B+树：在B树的基础上，将<strong>非叶节点改造为不存储数据纯索引节点</strong>，进一步<strong>降低了树的高度</strong>；此外将<strong>叶节点使用指针连接成链表</strong>，范围查询更加高效。</li></ul> <h3 id="b-树的叶子节点都可以存哪些东西"><a href="#b-树的叶子节点都可以存哪些东西" class="header-anchor">#</a> B+树的叶子节点都可以存哪些东西</h3> <p>(可能存储的是整行数据，也有可能是主键的值。B+树的叶子节点存储了整行数据的是主键索引，也被称之为聚簇索引。而索引B+ Tree的叶子节点存储了主键的值的是非主键索引，也被称之为非聚簇索引)</p> <h3 id="覆盖索引"><a href="#覆盖索引" class="header-anchor">#</a> 覆盖索引</h3> <p>指一个查询语句的执行只用从索引中就能够取得，不必从数据表中读取。也可以称之为实现了索引覆盖。</p> <p>**索引包含所有满足查询需要的数据的索引 **</p> <h3 id="查询在什么时候不走（预期中的）索引"><a href="#查询在什么时候不走（预期中的）索引" class="header-anchor">#</a> 查询在什么时候不走（预期中的）索引</h3> <p>​	like、不等于、参与计算、对null判断、or没有索引、查询集过大、非最左前缀</p> <ol><li>模糊查询 %like</li> <li>索引列参与计算,使用了函数</li> <li>非最左前缀顺序</li> <li>where对null判断</li> <li>where不等于</li> <li>or操作有至少一个字段没有索引</li> <li>需要回表的查询结果集过大（超过配置的范围）</li></ol> <h3 id="数据库优化指南"><a href="#数据库优化指南" class="header-anchor">#</a> 数据库优化指南</h3> <ol><li>创建并使用正确的索引</li> <li>只返回需要的字段</li> <li>减少交互次数（批量提交）</li> <li>设置合理的Fetch Size（数据每次返回给客户端的条数）</li></ol> <h3 id="索引类型"><a href="#索引类型" class="header-anchor">#</a> 索引类型</h3> <p><strong>从逻辑角度</strong></p> <p>1、<strong>主键索引</strong>：主键索引是一种特殊的唯一索引，不允许有空值 ADD PRIMARY KEY</p> <p>2、普通索引或者<strong>单列索引</strong></p> <p>​	 ADD INDEX index_name ( <code>column</code> )</p> <p>​	 <code>唯一任务是</code> <strong>加快对数据的访问速度</strong></p> <p>3、联合索引 ADD INDEX index_name ( )</p> <p>​	联合索引，对多个字段同时建立索引，最左前缀原则</p> <p>4、<strong>唯一索引</strong></p> <p>​	 ADD UNIQUE</p> <div class="language- extra-class"><pre><code>不允许两行具有相同的索引值 
+</code></pre></div><p><strong>主键索引和唯一索引的区别：</strong>
+(1) <code>对于主键</code>/unique constraint ， oracle/sql server/mysql等都<code>会自动建立唯一索引</code>；
+(2) <code>主键不一定只包含一个字段</code>，所以<code>在主键的其中一个字段</code>建<code>唯一索引</code>还是有必要的；
+(3) 主键<code>可作外键</code>，唯一索引不可；
+(4) 主键<code>不可为空</code>，唯一索引可；
+(5) 主键<code>可是多个字段的组合</code>；
+(6) 主键与唯一索引不同的是：
+a.有<code>not null</code>属性；
+b.每个表<code>只能有一个</code>。
+(7) 主键索引一定是唯一索引， <code>唯一索引不是主键索引</code>
+(8) 主键<code>可以与外键 构成 参照完整性约束</code>， <code>防止数据不一致</code></p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">更新时间:</span> <span class="time">2020年4月19日星期日下午12点32分</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/database/mysql/split.html" class="prev">
+        分表分库
+      </a></span> <!----></p></div>  <!----></main></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/assets/js/app.29834792.js" defer></script><script src="/assets/js/6.a4c4b5d6.js" defer></script><script src="/assets/js/2.1492d491.js" defer></script><script src="/assets/js/22.1380ca7e.js" defer></script><script src="/assets/js/3.90399333.js" defer></script>
+  </body>
+</html>

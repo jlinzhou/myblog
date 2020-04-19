@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>排序 | 一朝春诔</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    <link rel="icon" href="assets/img/favicon.ico">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icons/icon-152x152.png">
+    <meta name="description" content="一朝春诔的学习笔记">
+    <meta name="author" content="一朝春诔">
+    <meta name="keywords" content="vuepress介绍，vuepress说明，一朝春诔">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="icons/icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    <link rel="preload" href="/assets/css/0.styles.27faccf6.css" as="style"><link rel="preload" href="/assets/js/app.29834792.js" as="script"><link rel="preload" href="/assets/js/6.a4c4b5d6.js" as="script"><link rel="preload" href="/assets/js/2.1492d491.js" as="script"><link rel="preload" href="/assets/js/37.48f65213.js" as="script"><link rel="preload" href="/assets/js/3.90399333.js" as="script"><link rel="prefetch" href="/assets/js/10.87145463.js"><link rel="prefetch" href="/assets/js/11.1918620a.js"><link rel="prefetch" href="/assets/js/12.6cce430e.js"><link rel="prefetch" href="/assets/js/13.efa48d13.js"><link rel="prefetch" href="/assets/js/14.27d23835.js"><link rel="prefetch" href="/assets/js/15.6a4bd2a2.js"><link rel="prefetch" href="/assets/js/16.963c7d28.js"><link rel="prefetch" href="/assets/js/17.8e7d945e.js"><link rel="prefetch" href="/assets/js/18.8693db43.js"><link rel="prefetch" href="/assets/js/19.42cce320.js"><link rel="prefetch" href="/assets/js/20.6b2f826c.js"><link rel="prefetch" href="/assets/js/21.54a5a5f4.js"><link rel="prefetch" href="/assets/js/22.1380ca7e.js"><link rel="prefetch" href="/assets/js/23.5ae06d94.js"><link rel="prefetch" href="/assets/js/24.30ae2ad2.js"><link rel="prefetch" href="/assets/js/25.b5403e58.js"><link rel="prefetch" href="/assets/js/26.f3821ce8.js"><link rel="prefetch" href="/assets/js/27.e332d1a2.js"><link rel="prefetch" href="/assets/js/28.4f0a4b4d.js"><link rel="prefetch" href="/assets/js/29.aa1f0085.js"><link rel="prefetch" href="/assets/js/30.74d62b1b.js"><link rel="prefetch" href="/assets/js/31.0240618c.js"><link rel="prefetch" href="/assets/js/32.5e0c99bc.js"><link rel="prefetch" href="/assets/js/33.9a2cc730.js"><link rel="prefetch" href="/assets/js/34.11a5e517.js"><link rel="prefetch" href="/assets/js/35.30fcd52f.js"><link rel="prefetch" href="/assets/js/36.d92c317f.js"><link rel="prefetch" href="/assets/js/38.4229672d.js"><link rel="prefetch" href="/assets/js/39.9ebbe2e7.js"><link rel="prefetch" href="/assets/js/4.ffd4e858.js"><link rel="prefetch" href="/assets/js/40.2062c717.js"><link rel="prefetch" href="/assets/js/41.f083e3b3.js"><link rel="prefetch" href="/assets/js/42.d9c0e07c.js"><link rel="prefetch" href="/assets/js/43.2dd4922c.js"><link rel="prefetch" href="/assets/js/44.f5de393c.js"><link rel="prefetch" href="/assets/js/45.c82cb76e.js"><link rel="prefetch" href="/assets/js/46.65eb29c3.js"><link rel="prefetch" href="/assets/js/47.2ae4fd4e.js"><link rel="prefetch" href="/assets/js/5.0000f2bd.js"><link rel="prefetch" href="/assets/js/7.be7c9864.js"><link rel="prefetch" href="/assets/js/8.e855ae57.js"><link rel="prefetch" href="/assets/js/9.a7df38a9.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.27faccf6.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">一朝春诔</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/backend/golang/" class="nav-link">
+  golang
+</a></li><li class="dropdown-item"><!----> <a href="/backend/python/" class="nav-link">
+  python
+</a></li><li class="dropdown-item"><!----> <a href="/backend/cplus/" class="nav-link">
+  c++
+</a></li><li class="dropdown-item"><!----> <a href="/backend/lua/" class="nav-link">
+  lua
+</a></li><li class="dropdown-item"><!----> <a href="/backend/vba/" class="nav-link">
+  vba
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/database/mysql/" class="nav-link">
+  mysql
+</a></li><li class="dropdown-item"><!----> <a href="/database/mongodb/" class="nav-link">
+  mongodb
+</a></li><li class="dropdown-item"><!----> <a href="/database/redis/" class="nav-link">
+  redis
+</a></li><li class="dropdown-item"><!----> <a href="/database/etcd/" class="nav-link">
+  etcd
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">编程基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/programming/algo/" class="nav-link router-link-exact-active router-link-active">
+  算法与数据结构
+</a></li><li class="dropdown-item"><!----> <a href="/programming/pattern/" class="nav-link">
+  设计模式
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="操作系统" class="dropdown-title"><span class="title">操作系统</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/opersystem/windows/" class="nav-link">
+  windows
+</a></li><li class="dropdown-item"><!----> <a href="/opersystem/linux/" class="nav-link">
+  linux
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发工具" class="dropdown-title"><span class="title">开发工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/tool/git/" class="nav-link">
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/tool/goland/" class="nav-link">
+  goland
+</a></li><li class="dropdown-item"><!----> <a href="/tool/vscode/" class="nav-link">
+  vscode
+</a></li><li class="dropdown-item"><!----> <a href="/tool/pycharm/" class="nav-link">
+  pycharm
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/other/nginx/" class="nav-link">
+  nginx
+</a></li><li class="dropdown-item"><!----> <a href="/other/rabbitmq/" class="nav-link">
+  rabbitmq
+</a></li><li class="dropdown-item"><!----> <a href="/other/docker/" class="nav-link">
+  docker
+</a></li><li class="dropdown-item"><!----> <a href="/other/k8s/" class="nav-link">
+  k8s
+</a></li><li class="dropdown-item"><!----> <a href="/other/workrecord/" class="nav-link">
+  工作记录
+</a></li><li class="dropdown-item"><!----> <a href="/other/interview/" class="nav-link">
+  面试宝典
+</a></li><li class="dropdown-item"><!----> <a href="/other/other/" class="nav-link">
+  其他
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/frontend/vue/" class="nav-link">
+  vue
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/jlinzhou" target="_self" rel="" class="nav-link external">
+  Github
+  <!----></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/backend/golang/" class="nav-link">
+  golang
+</a></li><li class="dropdown-item"><!----> <a href="/backend/python/" class="nav-link">
+  python
+</a></li><li class="dropdown-item"><!----> <a href="/backend/cplus/" class="nav-link">
+  c++
+</a></li><li class="dropdown-item"><!----> <a href="/backend/lua/" class="nav-link">
+  lua
+</a></li><li class="dropdown-item"><!----> <a href="/backend/vba/" class="nav-link">
+  vba
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/database/mysql/" class="nav-link">
+  mysql
+</a></li><li class="dropdown-item"><!----> <a href="/database/mongodb/" class="nav-link">
+  mongodb
+</a></li><li class="dropdown-item"><!----> <a href="/database/redis/" class="nav-link">
+  redis
+</a></li><li class="dropdown-item"><!----> <a href="/database/etcd/" class="nav-link">
+  etcd
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">编程基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/programming/algo/" class="nav-link router-link-exact-active router-link-active">
+  算法与数据结构
+</a></li><li class="dropdown-item"><!----> <a href="/programming/pattern/" class="nav-link">
+  设计模式
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="操作系统" class="dropdown-title"><span class="title">操作系统</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/opersystem/windows/" class="nav-link">
+  windows
+</a></li><li class="dropdown-item"><!----> <a href="/opersystem/linux/" class="nav-link">
+  linux
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发工具" class="dropdown-title"><span class="title">开发工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/tool/git/" class="nav-link">
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/tool/goland/" class="nav-link">
+  goland
+</a></li><li class="dropdown-item"><!----> <a href="/tool/vscode/" class="nav-link">
+  vscode
+</a></li><li class="dropdown-item"><!----> <a href="/tool/pycharm/" class="nav-link">
+  pycharm
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/other/nginx/" class="nav-link">
+  nginx
+</a></li><li class="dropdown-item"><!----> <a href="/other/rabbitmq/" class="nav-link">
+  rabbitmq
+</a></li><li class="dropdown-item"><!----> <a href="/other/docker/" class="nav-link">
+  docker
+</a></li><li class="dropdown-item"><!----> <a href="/other/k8s/" class="nav-link">
+  k8s
+</a></li><li class="dropdown-item"><!----> <a href="/other/workrecord/" class="nav-link">
+  工作记录
+</a></li><li class="dropdown-item"><!----> <a href="/other/interview/" class="nav-link">
+  面试宝典
+</a></li><li class="dropdown-item"><!----> <a href="/other/other/" class="nav-link">
+  其他
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/frontend/vue/" class="nav-link">
+  vue
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/jlinzhou" target="_self" rel="" class="nav-link external">
+  Github
+  <!----></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>algo</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/programming/algo/" class="active sidebar-link">排序</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/programming/algo/#堆排序" class="sidebar-link">堆排序</a></li></ul></li><li><a href="/programming/algo/tree.html" class="sidebar-link">二叉树</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><p>顺序栈--入栈操作受数组上界的约束有可能发生栈上溢，且需要地址连续的存储单元。
+链栈--无须地址连续，便于多个栈共享存储单元，且不存在栈满上溢情况。
+顺序队列--需地址连续且有假上溢现象（需改为循环队列才可解决假上溢）
+链式队列--特别适合于数据元素变动比较大的情况，且不存在队列满而产生的溢出问题。</p> <p><strong>栈(Stack)：</strong>
+优点：提供后进先出的存储方式，添加速度快，允许重复；
+缺点：只能在一头操作数据，存取其他项很慢；</p> <p><strong>队列(Queue)：</strong>
+优点：提供先进先出的存储方式，添加速度快，允许重复；
+缺点：只能在一头添加，另一头获取，存取其他项很慢；</p> <h1 id="九大排序算法"><a href="#九大排序算法" class="header-anchor">#</a> 九大排序算法</h1> <h3 id="选择排序"><a href="#选择排序" class="header-anchor">#</a> 选择排序</h3> <p>算法思想：选择排序，从头至尾扫描序列，找出最小的一个元素，和第一个元素交换，接着从剩下的元素中继续这种选择和交换方式，最终得到一个有序序列。</p> <h3 id="插入排序"><a href="#插入排序" class="header-anchor">#</a> 插入排序</h3> <p>将一个记录插入到已排序好的有序表中，从而得到一个新，记录数增1的有序表。即：先将序列的第1个记录看成是一个有序的子序列，然后从第2个记录逐个进行插入，直至整个序列有序为止。</p> <h3 id="冒泡排序"><a href="#冒泡排序" class="header-anchor">#</a> 冒泡排序</h3> <p>在要排序的一组数中，对当前还未排好序的范围内的全部数，自上而下对相邻的两个数依次进行比较和调整，让较大的数往下沉，较小的往上冒。即：每当两相邻的数比较后发现它们的排序与排序要求相反时，就将它们互换。</p> <h2 id="堆排序"><a href="#堆排序" class="header-anchor">#</a> 堆排序</h2> <p>堆排序是一种树形选择排序，是对直接选择排序的有效改进。</p> <p><img src="https://upload-images.jianshu.io/upload_images/1940317-9c37b4be1b7c96d1.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/950/format/webp" alt=""></p> <h3 id="快速排序"><a href="#快速排序" class="header-anchor">#</a> 快速排序</h3> <p><strong>基本思想：</strong></p> <p>1）选择一个基准元素,通常选择第一个元素或者最后一个元素,</p> <p>2）通过一趟排序讲待排序的记录分割成独立的两部分，其中一部分记录的元素值均比基准元素值小。另一部分记录的 元素值比基准值大。</p> <p>3）此时基准元素在其排好序后的正确位置</p> <p>4）然后分别对这两部分记录用同样的方法继续进行排序，直到整个序列有序。</p> <h3 id="归并排序"><a href="#归并排序" class="header-anchor">#</a> 归并排序</h3> <p>归并（Merge）排序法是将两个（或两个以上）有序表合并成一个新的有序表，即把待排序序列分为若干个子序列，每个子序列是有序的。然后再把有序子序列合并为整体有序序列。</p> <p><img src="https://www.cxyxiaowu.com/wp-content/uploads/2019/12/1575556975-646803d6678ecbb.jpg" alt=""></p> <h3 id="希尔排序"><a href="#希尔排序" class="header-anchor">#</a> 希尔排序</h3> <p><strong>基本思想：</strong></p> <p>先将整个待排序的记录序列分割成为若干子序列分别进行直接插入排序，待整个序列中的记录“基本有序”时，再对全体记录进行依次直接插入排序。</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">更新时间:</span> <span class="time">2020年4月19日星期日下午12点32分</span></div></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/programming/algo/tree.html">
+        二叉树
+      </a>
+      →
+    </span></p></div>  <!----></main></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/assets/js/app.29834792.js" defer></script><script src="/assets/js/6.a4c4b5d6.js" defer></script><script src="/assets/js/2.1492d491.js" defer></script><script src="/assets/js/37.48f65213.js" defer></script><script src="/assets/js/3.90399333.js" defer></script>
+  </body>
+</html>
