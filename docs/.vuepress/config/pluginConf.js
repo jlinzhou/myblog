@@ -2,6 +2,7 @@ const moment = require('moment');
 moment.locale("zh-cn")
 const secret = require('./secret.js');
 module.exports = {
+    "vuepress-plugin-auto-sidebar": {},
     '@vuepress/last-updated':
     {
         transformer: (timestamp) => {

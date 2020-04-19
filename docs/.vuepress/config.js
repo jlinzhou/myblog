@@ -11,10 +11,10 @@ module.exports = {
     head: headConf,
     plugins: pluginConf,
     themeConfig: {
-        logo: '/assets/img/logo.png',
+        // logo: '/assets/img/logo.png',
         lastUpdated: '更新时间', // string | boolean
         nav: navConf,
-        sidebar: sidebarConf
+        // sidebar: sidebarConf
     }
 }
 // '/css/c-aaa',
