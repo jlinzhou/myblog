@@ -5,7 +5,7 @@ heroText: 一朝春诔
 title: 一朝春诔
 tagline: 一份耕耘,一份收获
 actionText: 查看笔记 →
-actionLink: /zh/guide/
+actionLink: /guide/
 features:
 - title: 关于
   details: 博客使用 VuePress 搭建，使用了pwa,back-to-top,google-analytics,vuepress-plugin-auto-sidebar,last-updated,medium-zoom插件，使用了Travis ci做持续集成。
