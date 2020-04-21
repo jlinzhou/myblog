@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>哈希表 | 一朝春诔</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    <link rel="icon" href="assets/img/favicon.ico">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icons/icon-152x152.png">
+    <meta name="description" content="一朝春诔的学习笔记">
+    <meta name="author" content="一朝春诔">
+    <meta name="keywords" content="vuepress介绍，vuepress说明，一朝春诔">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="icons/icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    <link rel="preload" href="/assets/css/0.styles.27faccf6.css" as="style"><link rel="preload" href="/assets/js/app.95a93de8.js" as="script"><link rel="preload" href="/assets/js/6.a4c4b5d6.js" as="script"><link rel="preload" href="/assets/js/2.1492d491.js" as="script"><link rel="preload" href="/assets/js/12.74cf1b73.js" as="script"><link rel="preload" href="/assets/js/3.90399333.js" as="script"><link rel="prefetch" href="/assets/js/10.87145463.js"><link rel="prefetch" href="/assets/js/11.1918620a.js"><link rel="prefetch" href="/assets/js/13.da980f86.js"><link rel="prefetch" href="/assets/js/14.ebd79c97.js"><link rel="prefetch" href="/assets/js/15.29e8f2be.js"><link rel="prefetch" href="/assets/js/16.157743a4.js"><link rel="prefetch" href="/assets/js/17.5e7f2180.js"><link rel="prefetch" href="/assets/js/18.c882a328.js"><link rel="prefetch" href="/assets/js/19.6d23a6a8.js"><link rel="prefetch" href="/assets/js/20.da7bc5d0.js"><link rel="prefetch" href="/assets/js/21.a43c0a5c.js"><link rel="prefetch" href="/assets/js/22.2c446ea3.js"><link rel="prefetch" href="/assets/js/23.2f07d9e1.js"><link rel="prefetch" href="/assets/js/24.812ccc0b.js"><link rel="prefetch" href="/assets/js/25.3bd50bfe.js"><link rel="prefetch" href="/assets/js/26.2fd7f5ac.js"><link rel="prefetch" href="/assets/js/27.aba220bc.js"><link rel="prefetch" href="/assets/js/28.31c5da93.js"><link rel="prefetch" href="/assets/js/29.b02ba201.js"><link rel="prefetch" href="/assets/js/30.9cbaf2aa.js"><link rel="prefetch" href="/assets/js/31.8865578f.js"><link rel="prefetch" href="/assets/js/32.e3207058.js"><link rel="prefetch" href="/assets/js/33.1031b5fc.js"><link rel="prefetch" href="/assets/js/34.13b8e9b6.js"><link rel="prefetch" href="/assets/js/35.3af0995c.js"><link rel="prefetch" href="/assets/js/36.b1298a7e.js"><link rel="prefetch" href="/assets/js/37.69abcca9.js"><link rel="prefetch" href="/assets/js/38.2b568838.js"><link rel="prefetch" href="/assets/js/39.a3c10cd4.js"><link rel="prefetch" href="/assets/js/4.85c7512a.js"><link rel="prefetch" href="/assets/js/40.542c5368.js"><link rel="prefetch" href="/assets/js/41.4d3a5e7b.js"><link rel="prefetch" href="/assets/js/42.2a860b52.js"><link rel="prefetch" href="/assets/js/43.73590455.js"><link rel="prefetch" href="/assets/js/44.db42ea2b.js"><link rel="prefetch" href="/assets/js/45.d857c044.js"><link rel="prefetch" href="/assets/js/46.99890b8b.js"><link rel="prefetch" href="/assets/js/47.4366be1f.js"><link rel="prefetch" href="/assets/js/48.cd3dff6e.js"><link rel="prefetch" href="/assets/js/5.7724c938.js"><link rel="prefetch" href="/assets/js/7.be7c9864.js"><link rel="prefetch" href="/assets/js/8.e855ae57.js"><link rel="prefetch" href="/assets/js/9.a7df38a9.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.27faccf6.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">一朝春诔</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/backend/golang/" class="nav-link router-link-active">
+  golang
+</a></li><li class="dropdown-item"><!----> <a href="/backend/python/" class="nav-link">
+  python
+</a></li><li class="dropdown-item"><!----> <a href="/backend/cplus/" class="nav-link">
+  c++
+</a></li><li class="dropdown-item"><!----> <a href="/backend/lua/" class="nav-link">
+  lua
+</a></li><li class="dropdown-item"><!----> <a href="/backend/vba/" class="nav-link">
+  vba
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/database/mysql/" class="nav-link">
+  mysql
+</a></li><li class="dropdown-item"><!----> <a href="/database/mongodb/" class="nav-link">
+  mongodb
+</a></li><li class="dropdown-item"><!----> <a href="/database/redis/" class="nav-link">
+  redis
+</a></li><li class="dropdown-item"><!----> <a href="/database/etcd/" class="nav-link">
+  etcd
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">编程基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/programming/algo/" class="nav-link">
+  算法与数据结构
+</a></li><li class="dropdown-item"><!----> <a href="/programming/pattern/" class="nav-link">
+  设计模式
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="操作系统" class="dropdown-title"><span class="title">操作系统</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/opersystem/windows/" class="nav-link">
+  windows
+</a></li><li class="dropdown-item"><!----> <a href="/opersystem/linux/" class="nav-link">
+  linux
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发工具" class="dropdown-title"><span class="title">开发工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/tool/git/" class="nav-link">
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/tool/goland/" class="nav-link">
+  goland
+</a></li><li class="dropdown-item"><!----> <a href="/tool/vscode/" class="nav-link">
+  vscode
+</a></li><li class="dropdown-item"><!----> <a href="/tool/pycharm/" class="nav-link">
+  pycharm
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/other/nginx/" class="nav-link">
+  nginx
+</a></li><li class="dropdown-item"><!----> <a href="/other/rabbitmq/" class="nav-link">
+  rabbitmq
+</a></li><li class="dropdown-item"><!----> <a href="/other/docker/" class="nav-link">
+  docker
+</a></li><li class="dropdown-item"><!----> <a href="/other/k8s/" class="nav-link">
+  k8s
+</a></li><li class="dropdown-item"><!----> <a href="/other/workrecord/" class="nav-link">
+  工作记录
+</a></li><li class="dropdown-item"><!----> <a href="/other/interview/" class="nav-link">
+  面试宝典
+</a></li><li class="dropdown-item"><!----> <a href="/other/other/" class="nav-link">
+  其他
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/frontend/vue/" class="nav-link">
+  vue
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/jlinzhou" target="_self" rel="" class="nav-link external">
+  Github
+  <!----></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/backend/golang/" class="nav-link router-link-active">
+  golang
+</a></li><li class="dropdown-item"><!----> <a href="/backend/python/" class="nav-link">
+  python
+</a></li><li class="dropdown-item"><!----> <a href="/backend/cplus/" class="nav-link">
+  c++
+</a></li><li class="dropdown-item"><!----> <a href="/backend/lua/" class="nav-link">
+  lua
+</a></li><li class="dropdown-item"><!----> <a href="/backend/vba/" class="nav-link">
+  vba
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="数据库" class="dropdown-title"><span class="title">数据库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/database/mysql/" class="nav-link">
+  mysql
+</a></li><li class="dropdown-item"><!----> <a href="/database/mongodb/" class="nav-link">
+  mongodb
+</a></li><li class="dropdown-item"><!----> <a href="/database/redis/" class="nav-link">
+  redis
+</a></li><li class="dropdown-item"><!----> <a href="/database/etcd/" class="nav-link">
+  etcd
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">编程基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/programming/algo/" class="nav-link">
+  算法与数据结构
+</a></li><li class="dropdown-item"><!----> <a href="/programming/pattern/" class="nav-link">
+  设计模式
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="操作系统" class="dropdown-title"><span class="title">操作系统</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/opersystem/windows/" class="nav-link">
+  windows
+</a></li><li class="dropdown-item"><!----> <a href="/opersystem/linux/" class="nav-link">
+  linux
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发工具" class="dropdown-title"><span class="title">开发工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/tool/git/" class="nav-link">
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/tool/goland/" class="nav-link">
+  goland
+</a></li><li class="dropdown-item"><!----> <a href="/tool/vscode/" class="nav-link">
+  vscode
+</a></li><li class="dropdown-item"><!----> <a href="/tool/pycharm/" class="nav-link">
+  pycharm
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/other/nginx/" class="nav-link">
+  nginx
+</a></li><li class="dropdown-item"><!----> <a href="/other/rabbitmq/" class="nav-link">
+  rabbitmq
+</a></li><li class="dropdown-item"><!----> <a href="/other/docker/" class="nav-link">
+  docker
+</a></li><li class="dropdown-item"><!----> <a href="/other/k8s/" class="nav-link">
+  k8s
+</a></li><li class="dropdown-item"><!----> <a href="/other/workrecord/" class="nav-link">
+  工作记录
+</a></li><li class="dropdown-item"><!----> <a href="/other/interview/" class="nav-link">
+  面试宝典
+</a></li><li class="dropdown-item"><!----> <a href="/other/other/" class="nav-link">
+  其他
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/frontend/vue/" class="nav-link">
+  vue
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/jlinzhou" target="_self" rel="" class="nav-link external">
+  Github
+  <!----></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>golang</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/backend/golang/" class="sidebar-link">golang基础</a></li><li><a href="/backend/golang/context.html" class="sidebar-link">context</a></li><li><a href="/backend/golang/map.html" class="active sidebar-link">哈希表</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/backend/golang/micro.html" class="sidebar-link">微服务</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="概念"><a href="#概念" class="header-anchor">#</a> 概念</h3> <p>哈希表 能够根据 键（Key）直接访问内存中的存储位置 ，它是key值通过<strong>哈希函数</strong>映射成索引</p> <h3 id="哈希冲突-哈希碰撞"><a href="#哈希冲突-哈希碰撞" class="header-anchor">#</a> 哈希冲突( 哈希碰撞 )</h3> <p>同一个散列值很有可能对应多个不同的原始输入</p> <h3 id="开放寻址法和链表法"><a href="#开放寻址法和链表法" class="header-anchor">#</a> 开放寻址法和链表法</h3> <h4 id="_1-开放寻址法"><a href="#_1-开放寻址法" class="header-anchor">#</a> <strong>1.开放寻址法</strong></h4> <div class="language- extra-class"><pre><code>开放寻址法的核心思想是，**如果出现了散列冲突，我们就重新探测一一个空闲位置**，将其插入。比如，我们可以使用线性探测法。当我们往散列表中插入数据时，如果某个数据经过散列函数散列之后，存储位置已经被占用了，我们就从当前位置开始，依次往后查找，看是否有空闲位置，如果遍历到尾部都没有找到空闲的位置，那么我们就再从表头开始找，直到找到为止。 
+</code></pre></div><h4 id="_2-链表法"><a href="#_2-链表法" class="header-anchor">#</a> <strong>2.链表法</strong></h4> <p><strong>简单来讲就是在冲突的位置拉一条链表来存储数据。</strong></p> <p>链表法是一种比较常用的散列冲突解决办法,Redis使用的就是链表法来解决散列冲突。链表法的原理是:如果遇到冲突，他就会在原地址新建一个空间，然后以链表结点的形式插入到该空间。当插入的时候，我们只需要通过散列函数计算出对应的散列槽位，将其插入到对应链表中即可。</p> <p>参考链接:</p> <p>1.https://www.cnblogs.com/hunternet/p/11324945.html</p> <ol start="2"><li>https://draveness.me/golang/docs/part2-foundation/ch03-datastructure/golang-hashmap/</li></ol></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">更新时间:</span> <span class="time">2020年4月21日星期二下午3点00分</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/backend/golang/context.html" class="prev">
+        context
+      </a></span> <span class="next"><a href="/backend/golang/micro.html">
+        微服务
+      </a>
+      →
+    </span></p></div>  <!----></main></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/assets/js/app.95a93de8.js" defer></script><script src="/assets/js/6.a4c4b5d6.js" defer></script><script src="/assets/js/2.1492d491.js" defer></script><script src="/assets/js/12.74cf1b73.js" defer></script><script src="/assets/js/3.90399333.js" defer></script>
+  </body>
+</html>
