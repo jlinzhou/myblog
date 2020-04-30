@@ -1,5 +1,5 @@
 ---
-title:go coredump调试笔记
+title: go coredump调试笔记
 ---
 
 
