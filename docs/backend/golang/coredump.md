@@ -1,6 +1,6 @@
-```
+---
 title:go coredump调试笔记
-```
+---
 
 
 
@@ -22,10 +22,9 @@ title:go coredump调试笔记
 
 ​	3) 
 
-``````shell
- echo "/data/coredump/core_%e_%t" > /proc/sys/kernel/core_pattern 设置core文件路径
-``````
-
+	```shell
+	 echo "/data/coredump/core_%e_%t" > /proc/sys/kernel/core_pattern 设置core文件路径
+	```
  	  **注意**: core文件路径必须提前创建，并且进程用户有写权限，可以设置成777的权限 
 
 ​	
