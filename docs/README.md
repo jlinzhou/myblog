@@ -3,7 +3,7 @@ home: true
 # heroImage: /hero.png
 heroText: 一朝春诔
 title: 一朝春诔
-tagline: 一份耕耘,一份收获
+tagline: 生命不是要超越别人，而是要超越自己。
 actionText: 查看笔记 →
 actionLink: /guide/
 features:
