@@ -27,7 +27,7 @@ self.addEventListener('message', (event) => {
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "6d3e30e90865bb3891c0668a2b2a2917"
+    "revision": "53309cfb7356ea9043b2c54764be1f4f"
   },
   {
     "url": "assets/css/0.styles.27faccf6.css",
@@ -246,88 +246,88 @@ self.__precacheManifest = [
     "revision": "a8f10c03ee16e565da360b2fdf750894"
   },
   {
-    "url": "assets/js/app.95952e4e.js",
-    "revision": "7126df624c8dd275b18e2685273572de"
+    "url": "assets/js/app.bc7a5933.js",
+    "revision": "57175fa85850791e8bde8d7362ff56e5"
   },
   {
     "url": "backend/cplus/index.html",
-    "revision": "d6fb9b41a7c64dc56d76bdc59ea44600"
+    "revision": "18ab818286c21151fb34abebdc81e0ce"
   },
   {
     "url": "backend/golang/context.html",
-    "revision": "264871846bc3c93e1a72560f66f008dd"
+    "revision": "be2387a1bcdd3a314af7519ccf3e6251"
   },
   {
     "url": "backend/golang/coredump.html",
-    "revision": "3c867f54800ad00a01bd1d5e41bf4515"
+    "revision": "954f0d0a8bc29a843c37d36713c8a608"
   },
   {
     "url": "backend/golang/index.html",
-    "revision": "162621fa1ae1c8a509c833a677a38c06"
+    "revision": "6760d04db502e5bc802ac93d84cf6a15"
   },
   {
     "url": "backend/golang/logrus.html",
-    "revision": "39723420147de69b3c082a5f317e94e8"
+    "revision": "36d7d9d177016636f0f8f85c9ad41064"
   },
   {
     "url": "backend/golang/map.html",
-    "revision": "a9cc1692e35d834857ca9a25eae2906f"
+    "revision": "a2126b3aefa7b7038e76685f50a98791"
   },
   {
     "url": "backend/golang/micro.html",
-    "revision": "9a8f38e62543c130368ed2f50411b733"
+    "revision": "485986eadc7e7ef7b4946b1310667309"
   },
   {
     "url": "backend/lua/index.html",
-    "revision": "53de747b98708f9e74873756ffbb88e1"
+    "revision": "cd2e8582770ee8dd6a1372553d49e3a5"
   },
   {
     "url": "backend/python/django.html",
-    "revision": "89ed22df96f50c73e4494f8314494dff"
+    "revision": "f92fdb81faa24605e99d9a16fbcb3de5"
   },
   {
     "url": "backend/python/index.html",
-    "revision": "35bb6d7a2bf1f79f411c419ab49d69d0"
+    "revision": "f765aac1ec0ca8b992ca5d77067e7b96"
   },
   {
     "url": "backend/vba/index.html",
-    "revision": "2fb3990b9982ec36ec10e0560a30dfe4"
+    "revision": "13c87396d17a16711ed777990ea80eb8"
   },
   {
     "url": "database/etcd/index.html",
-    "revision": "d7fc823e764b5f7619088ef77a12f0de"
+    "revision": "463396315a2dbb94f2788f6aec016b87"
   },
   {
     "url": "database/mongodb/index.html",
-    "revision": "93505b2e46fd53a8eb336512d7e8b8b8"
+    "revision": "6480b4fa2cb86afa30918c3e29771b3b"
   },
   {
     "url": "database/mysql/index.html",
-    "revision": "0e3e304c455d4aa0a59f8c86196fa821"
+    "revision": "b4f206206d27b85984423b8324f851c3"
   },
   {
     "url": "database/mysql/lock.html",
-    "revision": "dba66bf490199c5505adcad99955bc6e"
+    "revision": "7eea5e271de72dd798ade3323f6c4fe5"
   },
   {
     "url": "database/mysql/split.html",
-    "revision": "d964c0d1c4cf6abb03b03f0949345dfc"
+    "revision": "f25ac1ecd70d5c317fd529857185c25c"
   },
   {
     "url": "database/mysql/thing.html",
-    "revision": "99df464aa7111dc2b5639b5b5a1668d4"
+    "revision": "9a38e694a4b5ee971d110997e8c19da9"
   },
   {
     "url": "database/redis/index.html",
-    "revision": "4b7cf93ead4d4921b29c66eae6c118ed"
+    "revision": "5210d529e66a281af8a8878a1cf60822"
   },
   {
     "url": "frontend/vue/index.html",
-    "revision": "2573effda5f99deaa8b06faf763b6154"
+    "revision": "5a85bd018cfa807fcfa3c49dd95c1de9"
   },
   {
     "url": "guide/index.html",
-    "revision": "61c0eb26a29b35f4144841564787458b"
+    "revision": "5a2a1873c4edead35d50cfc3d90c412f"
   },
   {
     "url": "icons/icon-128x128.png",
@@ -363,83 +363,83 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "836829a4571ff118a00cdd0a5a05f6fb"
+    "revision": "dbf45e86b432bdc019fce1b159a1d310"
   },
   {
     "url": "opersystem/linux/index.html",
-    "revision": "d8c846c4e2a70709f8f2671f7f15096c"
+    "revision": "79bb03de1640f6d8f9bdb0d169787e42"
   },
   {
     "url": "opersystem/linux/shell.html",
-    "revision": "bd352d5f2b3a9394275633869871d69a"
+    "revision": "c0022e76066083614fef93f1274e3ec5"
   },
   {
     "url": "opersystem/windows/index.html",
-    "revision": "78517e3cdd4a6531e49ff5d704c441f2"
+    "revision": "69b6c1ee57ab3a90fda1f819dee28857"
   },
   {
     "url": "other/docker/index.html",
-    "revision": "412aeb481e402b8ec742e50a6a962a59"
+    "revision": "a3237f82015575f3a790a914def7476b"
   },
   {
     "url": "other/interview/index.html",
-    "revision": "28b7bb836a4acf19279a023530f38496"
+    "revision": "307b12cdf76d1d8b50aae5e9ddb783b1"
   },
   {
     "url": "other/k8s/index.html",
-    "revision": "064c75107fd3f5e7b90be9f7b3c1ef6c"
+    "revision": "6783b808335ebda1a4ed977378520b74"
   },
   {
     "url": "other/nginx/index.html",
-    "revision": "46c1e9023c8bacfd0c8fefc430cbfc9d"
+    "revision": "ab20e56ce54c967139f3605049d15031"
   },
   {
     "url": "other/other/index.html",
-    "revision": "ec720e997d784ed27fa72c703a01b9ca"
+    "revision": "6a556552776e7e6bc1bcc49177d178a6"
   },
   {
     "url": "other/other/system.html",
-    "revision": "1dc088b4d7e8d7e2e945794eb85c4ad6"
+    "revision": "ca2e746c7d663dd3e1e50af0af46a829"
   },
   {
     "url": "other/rabbitmq/index.html",
-    "revision": "da09321c9a716963182511c279df166d"
+    "revision": "34bfc07b8e12979f8ec32fdba8ac5a10"
   },
   {
     "url": "other/workrecord/index.html",
-    "revision": "6b219fa097ecdeef70043a4bdb33ca9a"
+    "revision": "ba14a16f5715ed7a2f715b5d997bf45a"
   },
   {
     "url": "programming/algo/index.html",
-    "revision": "493b18cd6e0d62fb5bce509651ec470d"
+    "revision": "f14cabd8fd7650e6862f428a3157e611"
   },
   {
     "url": "programming/algo/tree.html",
-    "revision": "5b86b62431eb8aee5054c4c5677c272c"
+    "revision": "f03a5100f6b3f2d3783a3921050b90e5"
   },
   {
     "url": "programming/pattern/index.html",
-    "revision": "bee1060c2acaf304513e70d8fa5eab9b"
+    "revision": "892122fea40c785d2f8a7eae1f363e28"
   },
   {
     "url": "programming/pattern/item.html",
-    "revision": "85f938c75a90f0cf7b1ef6620a6a62f8"
+    "revision": "f510f301e2aaed11078b907be26ac447"
   },
   {
     "url": "tool/git/index.html",
-    "revision": "244d17ec78b25a7da25dc6671f30b89d"
+    "revision": "800ab7a5f4539e11fc5c3a8624ba1552"
   },
   {
     "url": "tool/goland/index.html",
-    "revision": "01c9126e3c451e13eb84859c865594de"
+    "revision": "109a31a6dc9c3078f25a585463c2ad73"
   },
   {
     "url": "tool/pycharm/index.html",
-    "revision": "b499fd44f5ec6916245d8533a87fa6d6"
+    "revision": "5f2405821b5b3a778cbca9debb408586"
   },
   {
     "url": "tool/vscode/index.html",
-    "revision": "a5019eb48f8953618ae62fa1232677c9"
+    "revision": "b672a48f22e56c3f59668d1f8026fd96"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
