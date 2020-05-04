@@ -6,7 +6,7 @@ module.exports = {
     '@vuepress/last-updated':
     {
         transformer: (timestamp) => {
-            return moment(timestamp).format("LLLL")
+            return moment(timestamp).utcOffset(8).format("LLLL")
         }
     },
     '@vuepress/pwa': {
