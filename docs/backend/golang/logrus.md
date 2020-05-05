@@ -387,7 +387,7 @@ func (mf *MyFormatter) Format(entry *log.Entry) ([]byte, error) {
 prefix - hello world - suffix
 ```
 
-## 总结使用
+### 总结使用
 
 为了满足公司日志要求
 1.格式

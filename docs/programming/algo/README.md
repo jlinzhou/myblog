@@ -37,7 +37,7 @@ title: 排序
 
 算法思想：选择排序，从头至尾扫描序列，找出最小的一个元素，和第一个元素交换，接着从剩下的元素中继续这种选择和交换方式，最终得到一个有序序列。 
 
-```golang
+```go
 func selectSort(a []int) []int {
 	if len(a) <= 1 {
 		return a
@@ -64,7 +64,7 @@ func selectSort(a []int) []int {
 
  将一个记录插入到已排序好的有序表中，从而得到一个新，记录数增1的有序表。即：先将序列的第1个记录看成是一个有序的子序列，然后从第2个记录逐个进行插入，直至整个序列有序为止。 
 
-```golang
+```go
 func insertSort(a []int) []int {
 	length := len(a)
 	if length <= 1 {
@@ -90,7 +90,7 @@ func insertSort(a []int) []int {
 
  在要排序的一组数中，对当前还未排好序的范围内的全部数，自上而下对相邻的两个数依次进行比较和调整，让较大的数往下沉，较小的往上冒。即：每当两相邻的数比较后发现它们的排序与排序要求相反时，就将它们互换。 
 
-```golang
+```go
 func bubbleSort(a []int) []int {
 	for i := 0; i < len(a); i++ {
 		for j := i + 1; j < len(a); j++ {
@@ -125,7 +125,7 @@ func bubbleSort(a []int) []int {
 
 4）然后分别对这两部分记录用同样的方法继续进行排序，直到整个序列有序。
 
-```golang
+```go
 
 func quickSort(a []int) []int {
 	length := len(a)
@@ -162,7 +162,7 @@ func quickSort(a []int) []int {
 
 ![](https://www.cxyxiaowu.com/wp-content/uploads/2019/12/1575556975-646803d6678ecbb.jpg)
 
-```golang
+```go
 
 func merge(leftarr []int,rightarr []int) []int{
 	leftindex:=0//左边索引
@@ -245,7 +245,7 @@ func InsertSortX(arr [] int) []int{
 
 先将整个待排序的记录序列分割成为若干子序列分别进行直接插入排序，待整个序列中的记录“基本有序”时，再对全体记录进行依次直接插入排序。
 
-```golang
+```go
 func shellSortStep(a []int, start int, gap int) {
 	for i := start + gap; i < len(a); i += gap {
 		back := a[i]
@@ -279,7 +279,7 @@ func shellSort(a []int) []int {
 
 ### 桶排序
 
-```golang
+```go
 func  SelectSortMaxx(arr[] int) int{
 	length:=len(arr)//数组长度
 	if length <=1{
