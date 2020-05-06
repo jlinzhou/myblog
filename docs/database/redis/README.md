@@ -20,6 +20,8 @@ title: redis
 
 字符串String、字典Hash、列表List、集合Set、有序集合SortedSet。
 
+Set 是 String 类型的无序集合。集合成员是唯一的，这就意味着集合中不能出现重复的数据。集合是通过哈希表实现的，所以添加，删除，查找的复杂度都是 O(1)。
+
 Pub/Sub。
 
 ### Redis 的数据过期策略
