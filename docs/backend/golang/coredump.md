@@ -20,11 +20,30 @@ title: go coredump调试笔记
 
 ​		**注意**:可能会设置不成功，可查看 https://www.cnblogs.com/qiumingcheng/p/11668423.html 
 
+​		**永久生效方法**
+
+```shell
+vi /etc/profile
+#添加
+ulimit -u 10000
+ulimit -n 4096
+ulimit -d unlimited
+ulimit -m unlimited
+ulimit -s unlimited
+ulimit -t unlimited
+ulimit -v unlimited
+ulimit -c unlimited
+
+```
+
+添加后sudo  source /etc/profile 使生效
+
 ​	3) 
 
-	```shell
-	 echo "/data/coredump/core_%e_%t" > /proc/sys/kernel/core_pattern 设置core文件路径
-	```
+```shell
+#设置core文件路径
+sudo echo '/home/origin/goCoreDump/core_%e.%p' | sudo tee /proc/sys/kernel/core_pattern 
+```
  	  **注意**: core文件路径必须提前创建，并且进程用户有写权限，可以设置成777的权限 
 
 ​	
@@ -32,7 +51,7 @@ title: go coredump调试笔记
 ### 3.启动
 
 ```shell
-GOTRACEBACK=crash ./hello &
+GOTRACEBACK=crash nohup ./hello &
 ```
 
 
