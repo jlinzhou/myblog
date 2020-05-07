@@ -16,6 +16,16 @@ title: go coredump调试笔记
 
 ​    1) 安装 [delve](https://github.com/derekparker/delve)  ，用来分析 core dump 文件
 
+```shell
+go get github.com/go-delve/delve/cmd/dlv
+#或者
+$ git clone https://github.com/go-delve/delve.git $GOPATH/src/github.com/go-delve/delve
+$ cd $GOPATH/src/github.com/go-delve/delve
+$ make install
+```
+
+
+
 ​	2) ulimit -c unlimited， 设置core dump最大容量 为无限制
 
 ​		**注意**:可能会设置不成功，可查看 https://www.cnblogs.com/qiumingcheng/p/11668423.html 
